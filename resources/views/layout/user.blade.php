@@ -50,12 +50,7 @@
                                 @if(Session::get('user'))
                                     <li>
                                         <a href="{{ url('user/user/edit') }}">
-                                        @if(Session::get('user')->user_avatar)   
-                                            <img src="{{ asset('public/img/'.Session::get('user')->user_avatar) }}" 
-                                            style="max-width: 30px;max-height: 30px;position: absolute;top:10px;left: -10%;" class="img-circle center-block">
-                                        @else
-                                            <i class="glyphicon glyphicon-user"></i>
-                                        @endif
+                                        <i class="glyphicon glyphicon-user"></i>
                                         <span class="label label-success" style="vertical-align: 2px;margin-right: 5px;margin-left: 5px;">
                                             {{ Session::get('user')->user_group }}
                                         </span>

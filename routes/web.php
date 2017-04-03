@@ -2,8 +2,8 @@
 // web
 Route::get('/', 'Web\HomeController@show');
 Route::get('/sitemap', 'Web\HomeController@sitemap');
-Route::get('/ve-chung-toi', 'Web\HomeController@about');
-Route::get('/dia-chi-phong-kham', 'Web\HomeController@address');
+Route::get('/about', 'Web\HomeController@about');
+Route::get('/address', 'Web\HomeController@address');
 Route::any('/search{query?}', 'Web\HomeController@search');
 // Term
 Route::get('/{term_alias?}/{term_id?}', 'Web\TermController@show')->where(['term_alias'=>'[-a-z0-9]+','term_id'=>'[0-9]+']);
@@ -43,6 +43,3 @@ Route::group(['middleware' => ['check-user']], function () {
 	Route::any('user/setting/create', 'User\SettingController@create')->middleware('check-admin');
 	Route::any('user/setting/edit/{setting_id}', 'User\SettingController@edit')->middleware('check-admin');
 });
-
-// DB
-Route::any('db_pluck','Web\TestController@db_pluck');

@@ -30,9 +30,7 @@
 </head>
 <body>
     <header>
-		<div class="container">
-			
-		</div>
+		<h2><a href="#"><img src="{{ asset('public/images/desktop/header-1.png') }}" class="center-block img-responsive"></a></h2>
 	</header>
     <menu>
 		<div class="container">
