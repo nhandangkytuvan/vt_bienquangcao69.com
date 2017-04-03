@@ -1,0 +1,85 @@
+header menu{
+	background-color: #228f0f;
+}
+header menu .flex1 .flex1col1 a{
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+} 
+/**/
+header .danhmuc .flex1 .flex1col1{
+	padding-top: 18px;
+	background-color: #fff;
+	width: 260px;
+}
+header .danhmuc .flex1 h3.title1{
+	height: 33px;
+	line-height: 33px;
+	border:1px solid #686a15;
+	color: #fff;
+	font-size: 14px;
+	background-color: #228f0f;
+}
+header .danhmuc .flex1 .flex1col1 ul{
+	list-style: none;
+	padding:0px 10px;
+}
+header .danhmuc .flex1 .flex1col1 ul li{
+	padding:8px 0px;
+	border-bottom: 1px solid #686a15;
+}
+header .danhmuc .flex1 .flex1col1 ul li h4{
+	position: relative;
+	padding-left: 10px;
+}
+header .danhmuc .flex1 .flex1col1 ul li i{
+	position: absolute;
+	left: 0px;
+}
+header .danhmuc .flex1 .flex1col1 ul li:last-child{
+	border-bottom: none;
+}
+header .danhmuc .flex1 .flex1col1 ul li a{
+
+}
+/**/
+header .danhmuc .flex1 .flex1col2{
+	padding:0px 5px;
+	padding-top: 18px;
+	background-color: #fff;
+	width: 475px;
+}
+header .danhmuc .flex1 .flex1col2 >div:nth-child(1){
+	height: 33px;
+	border:1px solid #686a15;
+}
+header .danhmuc .flex1 .flex1col2 >div:nth-child(2){
+	margin-top: 5px;
+	padding-bottom: 10px;
+}
+/**/
+header .danhmuc .flex1 .flex1col3{
+	padding-top: 18px;
+	background-color: #fff;
+	width: 240px;
+}
+header .danhmuc .flex1 .flex1col3 ul{
+	list-style: none;
+	padding:0px 10px;
+}
+header .danhmuc .flex1 .flex1col3 ul li{
+	padding: 5px;
+}
+header .danhmuc .flex1 .flex1col3 ul.phone li i{
+	display: inline-block;
+	background-image: url('../../images/desktop/icon-1.png');
+	width: 14px;
+	height: 15px;
+	vertical-align: -1px;
+	margin-right: 5px;
+}
+header .danhmuc .flex1 .flex1col3 ul li a{
+	color: red;
+	font-weight: normal;
+}

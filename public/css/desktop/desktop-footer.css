@@ -1,0 +1,48 @@
+footer .khach-hang h3{
+	display: inline-block;
+	padding:0px 10px;
+	height: 34px;
+	line-height: 34px;
+	color: #fff;
+	background-color: #228f0f;
+}
+footer .khach-hang >div{
+	margin-top: 20px;
+}
+/**/
+footer menu{
+	background-color: #228f0f;
+}
+footer menu .flex1 .flex1col1 a{
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+}
+/**/
+footer .container{
+	background-color: #fff;
+}
+/**/
+footer .footer{
+	padding: 30px 0px;
+}
+footer .footer .flex1col1{
+	width: 256px;
+}
+footer .footer .flex1col2{
+	width: 735px;
+}
+footer .footer .flex1col2 h2{
+	font-size: 18px;margin-bottom: 5px;
+}
+footer .footer .flex1col2 h2:nth-child(2){
+	color: #228f0f;margin-bottom: 5px;
+}
+footer .footer .flex1col2 p{
+	margin-bottom: 5px;
+}
+footer .footer-status{
+	background-color: #228f0f;
+	height: 25px;
+}
