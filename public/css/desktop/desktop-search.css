@@ -1,0 +1,47 @@
+/**/
+main.term .flex0col1 h1{
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+}
+main.term .meo-nho{
+	margin-top: 15px;
+}
+main.term .meo-nho span{
+	color: red;
+}
+main.term .flex0col1 .posts{
+	margin-top: 28px;
+}
+main.term .flex0col1 .post{
+	border-top: 1px solid #dfdfdf;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-right: 10px;
+}
+main.term .flex0col1 .post h3{
+	color: #000;
+	font-size: 18px;
+	font-weight: normal;
+}
+main.term .flex0col1 .post h3 i{
+	color: red;
+	font-style: normal;
+}
+main.term .flex0col1 .post span{
+	font-size: 12px;
+	color: #a3a3ab;
+}
+main.term .flex0col1 .post p{
+	margin-top: 10px;
+	color: #6d6d6d;
+	line-height: 22px;
+}
+main.term .flex0col1 .post p a{
+	display: inline-block;
+	color: red;
+}
+/**/
+main.term a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,20 @@
+.post-detail{color:inherit;box-sizing:border-box;font-weight:400}
+.mce-container textarea{display:initial!important}
+.post-detail{font-family:Arial;font-size:14px;padding:0 0px}
+.post-detail h1,.post-detail h2,.post-detail h3,.post-detail h4,.post-detail h5,.post-detail h6{font-family:aileron;font-weight:200;line-height:1.4em;margin:25px 0 15px}
+.post-detail h1{font-size:34px}
+.post-detail h2{font-size:30px}
+.post-detail h3{font-size:26px}
+.post-detail h4{font-size:22px}
+.post-detail h5{font-size:18px}
+.post-detail h6{font-size:14px}
+.post-detail p{margin:25px 0}
+.post-detail ol,.post-detail ul{margin-left:15px;list-style-position:outside;margin-bottom:20px}
+.post-detail ol li,.post-detail ul li{margin-left:10px;margin-bottom:10px;}
+.post-detail ul{list-style-type:disc}
+.post-detail ol{list-style-type:decimal}
+.post-detail table{width:100%;border-spacing:0;border-collapse:separate;border:1px solid #aaa}
+.post-detail table tr:nth-child(even){background:#FAFAFA}
+.post-detail table caption,.post-detail table td,.post-detail table th{padding:15px 7px;font:inherit}
+.post-detail table th{font-weight:400;background-position:100% 100%;background-size:2px 10px;background-repeat:no-repeat}
+.post-detail table th:last-child{background:0 0}

@@ -1,0 +1,121 @@
+header{
+	padding:10px;
+}
+header .flex2col1{
+	padding-right: 10px;
+}
+header .flex1col1 h3{
+	color: #2a6636;
+	font-size: 14px;
+}
+header .flex1col1 h4{
+	font-size: 10px;
+	color: #eb2b41;
+	margin-top: 5px;
+}
+header .flex1col2 h4{
+	padding-right: 10px;
+}
+header .flex1col2 h6{
+	color: #eb2b41;
+	font-size: 10px;
+}
+header .flex1col2 h5 a{
+	display: block;
+	background-color: #eb2b41;
+	color: #fff;
+	text-align: center;
+	padding:5px 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+	font-size: 10px;
+}
+/**/
+menu .search{
+	background-color: #1475c4;
+	padding:15px 5px;
+}
+menu .search .flex1col1{
+	padding:1px;
+}
+menu .search .flex1col1 input{
+	height: 30px;
+	line-height: 30px;
+	border:none;
+	outline: none;
+	background-color: #fff;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top-left-radius:5px; 
+	border-bottom-left-radius:5px; 
+	width: 70%;
+} 
+menu .search .flex1col1 button{
+	outline: none;
+	height: 30px;
+	line-height: 30px;
+	background-color: #008dff;
+	color: #fff;
+	text-align: center;
+	overflow-y: hidden;
+	border:1px solid #fff;
+	margin-left: -4px;
+	border-top-right-radius:5px; 
+	border-bottom-right-radius:5px; 
+	padding:0px 8px;
+	vertical-align: -1px;
+	width: 30%;
+}
+menu .search .flex1col2 a{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 10px;
+	text-align: center;
+	color: red;
+	box-shadow: 2px 2px black;
+	font-weight: normal;
+	background-color: #fff;
+	padding:0px 8px;
+	overflow-y: hidden;
+}
+/**/
+menu .menu{
+	margin-top: 20px;
+}
+menu .menu .flex2col1{
+	width: 30%;
+	border:1px solid #b6b6b6;
+	padding:10px;
+	margin-bottom: 5px;
+}
+menu .menu .flex2col1 .box-center h3 i.bg{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-position: 0px 0px;
+	background-image: url('../../images/mobile/icon-1.png');
+}
+menu .menu .flex2col1 .box-center h3 i.bg2{
+	background-position: -208px 0px;
+}
+menu .menu .flex2col1 .box-center h3 i.bg3{
+	background-position: -408px 0px;
+}
+menu .menu .flex2col1 .box-center h3 i.bg4{
+	background-position: 0px -55px;
+}
+menu .menu .flex2col1 .box-center h3 i.bg5{
+	background-position: -208px -55px;
+}
+menu .menu .flex2col1 .box-center h3 i.bg6{
+	background-position: -408px -55px;
+}
+menu .menu .flex2col1 .box-center h4{
+	font-size: 14px;
+	font-weight: normal;
+}
+menu .menu .flex2col1 .box-center h5{
+	font-size: 11px;
+	font-weight: normal;
+}

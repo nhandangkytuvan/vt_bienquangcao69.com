@@ -1,0 +1,51 @@
+footer{
+	background-image: url('../../images/desktop/footer-bg1.png');
+	background-repeat: no-repeat;
+	color: #fff;
+	position: relative;
+	width: 100%;
+}
+footer >div:first-child{
+	height: 250px;
+}
+/**/
+footer .flex1col1{
+	padding-top: 40px;
+	flex-basis: 300px;
+	text-align: center;
+}
+footer .flex1col1 h3{
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+/**/
+footer .flex1col2{
+	flex-basis: 340px;
+	padding-left: 40px;
+	padding-top: 65px;
+}
+footer .flex1col2 p{
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+footer .flex1col2 p a{
+	font-size: 30px;
+}
+/**/
+footer .flex1col3{
+	padding-top: 80px;
+}
+footer .flex1col3 h4{
+	text-transform: uppercase;
+	font-size: 17px;
+	margin-top: 20px;
+	font-weight: normal;
+	text-align: center;
+}
+/**/
+footer div.footer-status{
+	height: 50px;
+	line-height: 50px;
+	background-color: #289daf;
+}

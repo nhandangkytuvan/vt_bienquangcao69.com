@@ -1,0 +1,54 @@
+div.post{
+	padding:15px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+div.post .post-name h1{
+	color: rgb(46,116,181);
+	text-align: center;
+	text-transform: uppercase;
+}
+.address h3{
+	margin:20px auto;
+	margin-right: 20px;
+}
+.address h2{
+	font-size: 16px;
+	margin:10px auto;
+	font-weight: bold;
+	font-size: 12px;
+}
+.address .address-bus{
+	padding:20px 0px;
+	border-top: 1px solid #eaeaea;
+}
+.address .address-bus .flex1{
+	margin-top: 10px;
+}
+.address .address-bus .flex1col1{
+	width: 70px;
+}
+.address .address-bus .flex1col2{
+	width: calc(100% - 70px);
+}
+.address .address-bus h3{
+	color: rgb(191,143,0);
+	font-size: 16px;
+	margin:10px auto;
+}
+.address .address-bus h4 a{
+	color: red;
+	font-size: 12px;
+}
+.address .address-bus h5{
+	margin:15px auto;
+	color: rgb(192,0,0);
+	font-size: 12px;
+}
+.address .address-bus .flex1col1{
+	width: 100px;
+}
+/**/
+.address a:hover{
+	text-decoration: underline;
+}

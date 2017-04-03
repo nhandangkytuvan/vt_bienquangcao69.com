@@ -1,0 +1,22 @@
+div.post{
+	padding:15px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+div.post .post-detail{
+	line-height: 20px;
+}
+div.post .post-detail img{
+	max-width: 100%;
+}
+div.post .post-footer{
+	line-height: 20px;
+}
+div.post .post-footer p{
+	text-align: justify;
+	margin-top: 15px;
+}
+div.post .post-footer span,div.post .post-footer a{
+	color: red;
+	font-weight: bold;
+}

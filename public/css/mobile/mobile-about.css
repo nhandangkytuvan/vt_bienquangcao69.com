@@ -1,0 +1,54 @@
+div.post .post-name h1{
+	color: rgb(46,116,181);
+	text-align: center;
+	text-transform: uppercase;
+}
+div.post .post-description p{
+	margin-top: 5px;
+	font-weight: bold;
+}
+div.post{
+	padding:15px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+div.post .post-detail{
+	line-height: 20px;
+}
+div.post p{
+	margin-bottom: 5px;
+}
+div.post .post-detail img{
+	max-width: 100%;
+	margin:20px auto;
+}
+div.post .post-detail h4{
+	color: rgb(46,116,181);
+	padding-bottom: 8px;
+	border-bottom: 2px solid rgb(46,116,181);
+}
+div.post .post-detail a{
+	color: #c50707;
+	display: inline-block;
+	text-align: center;
+	font-size: 13px;
+	background-image: url('../../images/mobile/click.png');
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+div.post .post-detail a{
+
+}
+div.post .post-detail ul{
+	list-style: none;
+	margin-left: 15px;
+}
+div.post .post-detail ul li{
+	margin-bottom: 10px;
+}
+div.post .post-detail h5{
+	color: rgb(131,60,11);
+	margin:5px auto;
+	font-size: 13px;
+}
