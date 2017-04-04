@@ -71,6 +71,9 @@ header .danhmuc .flex1 .flex1col1 ul li h4{
 	position: relative;
 	padding-left: 10px;
 }
+header .danhmuc .flex1 .flex1col1 ul li h4:hover{
+	color: red;
+}
 header .danhmuc .flex1 .flex1col1 ul li i{
 	position: absolute;
 	left: 0px;
