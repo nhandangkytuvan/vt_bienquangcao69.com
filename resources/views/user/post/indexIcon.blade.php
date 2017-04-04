@@ -4,7 +4,7 @@
 @endsection('menu')
 @section('content')
 <div style="margin-bottom: 10px;">
-    <form action="{{ url('user/post/index') }}" class="form-inline">
+    <form action="" class="form-inline">
         <input type="hidden" name="view" value="{{ Request::input('view') }}">
         <div class="form-group">
             <select name="term_id" class="form-control">
@@ -68,9 +68,9 @@
             <td>{{ $post->id }}</td>
             <td><a href="{{ url($post->post_alias.'/'.$post->id.'.htm') }}">
                 @if($post->post_avatar)
-                <img src="{{ asset('public/img/'.$post->post_avatar) }}" class="img-responsive img-thumbnail" style="max-width: 90px;"></a>
+                <img src="{{ asset('public/img/'.$post->post_avatar) }}" class="img-responsive" style="max-width: 90px;"></a>
                 @else
-                <img src="{{ asset('public/img/no-image.png') }}" class="img-responsive img-thumbnail" style="max-width: 90px;"></a>
+                <img src="{{ asset('public/img/no-image.png') }}" class="img-responsive" style="max-width: 90px;"></a>
                 @endif
             </td>
             <td><a href="{{ url($post->post_alias.'/'.$post->id.'.htm') }}">{{ $post->post_name }}</a></td>

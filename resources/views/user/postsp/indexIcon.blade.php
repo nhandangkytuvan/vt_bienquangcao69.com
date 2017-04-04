@@ -51,34 +51,42 @@
     <div class="panel-heading text-center">
         <a href="#" class="pull-left"> <span class="label label-success">Tông: {{ $data['posts']->total() }}</span> </a>
         Danh sách bài viết
-        <a href="{{ url('user/post/index?view=icon') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-large"></span> </a>
-        <a href="{{ url('user/post/index?view=list') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-list"></span> </a>
+        <a href="{{ url('user/post-sp/index?view=icon') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-large"></span> </a>
+        <a href="{{ url('user/post-sp/index?view=list') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-list"></span> </a>
     </div>
     <table class="table table-bordered">
         <tr class="active">
             <td>ID</td>
+            <td>Ảnh</td>
             <td>Tên</td>
+            <td>Giá</td>
             <td>Mục</td>
-            <td>T.thái</td>
-            <td>T.giả</td>
             <td>T.xem</td>
             <td>Date</td>
+            <td>T.thái</td>
             <td>#</td>
         </tr>
         @foreach($data['posts'] as $key => $post)
         <tr>
             <td>{{ $post->id }}</td>
+            <td><a href="{{ url($post->post_alias.'/'.$post->id.'.htm') }}">
+                @if($post->post_avatar)
+                <img src="{{ asset('public/img/'.$post->post_avatar) }}" class="img-responsive" style="max-width: 90px;"></a>
+                @else
+                <img src="{{ asset('public/img/no-image.png') }}" class="img-responsive" style="max-width: 90px;"></a>
+                @endif
+            </td>
             <td><a href="{{ url($post->post_alias.'/'.$post->id.'.htm') }}">{{ $post->post_name }}</a></td>
+            <td><a href="#">{{ $post->postSP->post_price }}</a></td>
             <td><a href="{{ url($post->term->term_alias.'/'.$post->term->id) }}">{{ $post->term->term_name }}</a></td>
+            <td><a href="#">{{ $post->view ? $post->view->view_sum : '' }}</a></td>
+            <td>{{ date('d.m',strtotime($post->created_at)) }}</td>
             <td>
                 <div class="radio {{ $post->post_status == 1 ? 'radio-success' : 'radio-default' }} radio-inline">
                     <input type="radio" checked="">
                     <label></label>
                 </div>
             </td>
-            <td>{{ $post->user->user_name }}</td>
-            <td>{{ isset($post->view) ? $post->view->view_sum : '' }}</td>
-            <td>{{ date('d.m',strtotime($post->created_at)) }}</td>
             <td>
                 <div class="clearfix">
                     <div class="pull-right">
@@ -93,12 +101,12 @@
                                     </a> 
                                 </li> 
                                 <li>
-                                    <a href="{{ url('user/post/edit/'.$post->id) }}">
+                                    <a href="{{ url('user/post-sp/edit/'.$post->id) }}">
                                         <span class="glyphicon glyphicon-pencil"></span> Sửa bài viết
                                     </a> 
                                 </li> 
                                 <li>
-                                    <a href="{{ url('user/post/delete/'.$post->id) }}">
+                                    <a href="{{ url('user/post-sp/delete/'.$post->id) }}">
                                         <span class="glyphicon glyphicon-trash"></span> Xóa bài viết
                                     </a> 
                                 </li>

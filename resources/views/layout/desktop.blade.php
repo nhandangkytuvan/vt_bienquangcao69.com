@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/font-awesome/css/font-awesome.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/slick/slick.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/slick/slick-theme.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/toastr8/dist/css/toastr8.css') }}">
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/hover/css/hover.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/desktop/desktop.css') }}">
@@ -24,7 +23,6 @@
 	<script type="text/javascript" src="{{ asset('public/js/global/jquery-1.12.3.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('public/js/global/jquery-scrolltofixed-min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('public/js/global/slick/slick.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('public/js/global/toastr8/dist/js/toastr8.min.js') }}"></script>
 	@yield('js')
 	<script type="text/javascript" src="{{ asset('public/js/desktop/desktop.js') }}"></script>
 </head>
@@ -45,27 +43,22 @@
 							<h3><a href="{{ MyAPI::getUrlTerm(1) }}" class="flex align-items-center justify-content-center">Sản phẩm</a></h3>
 							<div class="menu-item pos-absolute">
 								<ul>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(2) }}">Biển quảng cáo hộp đèn</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(3) }}">Biển quảng cáo bạt hiflex</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(4) }}">Biển quảng cáo chữ nổi đồng, inox</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(5) }}">BIỂN LED</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(6) }}">Biển quảng cáo Công ty</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(7) }}">Biển quảng cáo cửa hàng</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(8) }}">Biển alu gắn chữ nổi</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(9) }}">Treo phướn (băng rôn)</a></h3></li>
-									<li><h3><a href="{{ MyAPI::getUrlTerm(10) }}">Gian hàng hội chợ, triển lãm</a></h3></li>
+									@php $product_childs = $product->children @endphp
+									@foreach($product_childs as $product_child)
+									<li><h3><a href="{{ MyAPI::getUrlTerm($product_child->id) }}">{{ $product_child->term_name }}</a></h3></li>
+									@endforeach
 								</ul>
 							</div>
 						</div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Công trình mới</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlTerm(13) }}" class="flex align-items-center justify-content-center">Công trình mới</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
+						<div><h3><a href="{{ url('address') }}" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Tuyển dụng</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlTerm(14) }}" class="flex align-items-center justify-content-center">Tuyển dụng</a></h3>
 					</div>
 				</div>
 			</div>
@@ -76,28 +69,21 @@
 					<h3 class="text-center title1">Danh mục</h3>
 					<div>
 						<ul>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Biển quảng cáo hộp đèn</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Biển quảng cáo bạt hiflex</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Biển quảng cáo chữ nổi đồng</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Inox</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">BIỂN LED</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Biển quảng cáo Công ty</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Biển quảng cáo cửa hàng</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Biển alu gắn chữ nổi</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Treo phướn (băng rôn)</a></h4></li>
-							<li><h4><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="">Gian hàng hội chợ, triển lãm</a></h4></li>
+							@foreach($product_childs as $product_child)
+							<li><h4><i class="fa fa-angle-double-right"></i> <a href="{{ MyAPI::getUrlTerm($product_child->id) }}">{{ $product_child->term_name }}</a></h4></li>
+							@endforeach
 						</ul>
 					</div>
 				</div>
 				<div class="flex1col2">
 					<div class="search">
-						<form action="">
+						<form action="{{ url('search') }}">
 							<div class="flex">
 								<div class="col1">
 									
 								</div>
 								<div class="col2">
-									<input type="text" placeholder="Từ khóa...">
+									<input type="text" placeholder="Từ khóa..." name="keyword">
 								</div>
 								<div class="col3">
 									<button type="submit">Tìm kiếm</button>
@@ -114,7 +100,7 @@
 					<div class="phone">
 						<div class="flex flex2 justify-content-between">
 							<div class="flex2col1 flex justify-content-center align-items-center">
-								<h3><a href=""><i></i></a></h3>
+								<h3><a href="tel:09 232 99998"><i></i></a></h3>
 							</div>
 							<div class="flex2col2 flex align-items-center">
 								<div>
@@ -127,7 +113,7 @@
 					<div class="email">
 						<div class="flex flex2 justify-content-between">
 							<div class="flex2col1 flex justify-content-center align-items-center">
-								<h3><a href=""><i></i></a></h3>
+								<h3><a href="mailto:bienquangcao69@gmail.com"><i></i></a></h3>
 							</div>
 							<div class="flex2col2 flex align-items-center">
 								<div>
@@ -139,7 +125,7 @@
 					<div class="skype">
 						<div class="flex flex2 justify-content-between">
 							<div class="flex2col1 flex justify-content-center align-items-center">
-								<h3><a href=""><i></i></a></h3>
+								<h3><a href="skype:bienquangcao69"><i></i></a></h3>
 							</div>
 							<div class="flex2col2 flex align-items-center">
 								<div>
@@ -169,19 +155,19 @@
 						<div><h3><a href="{{ url('/') }}" class="flex align-items-center justify-content-center">Trang chủ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
+						<div><h3><a href="{{ url('about') }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Sản phẩm</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlTerm(1) }}" class="flex align-items-center justify-content-center">Sản phẩm</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Công trình mới</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlTerm(13) }}" class="flex align-items-center justify-content-center">Công trình mới</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
+						<div><h3><a href="{{ url('address') }}" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Tuyển dụng</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlTerm(14) }}" class="flex align-items-center justify-content-center">Tuyển dụng</a></h3></div>
 					</div>
 				</div>
 			</menu>

@@ -67,6 +67,6 @@ body{
 .list-group-item.active a{
     color: white;
 }
-.form-control,.label,.input-group-addon,.btn{
+/*.form-control,.label,.input-group-addon,.btn{
     border-radius: 0;
-}
+}*/

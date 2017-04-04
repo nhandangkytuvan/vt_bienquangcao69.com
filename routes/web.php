@@ -28,6 +28,12 @@ Route::group(['middleware' => ['check-user']], function () {
 	Route::any('user/post/show/{post_id?}','User\PostController@show');
 	Route::any('user/post/delete/{post_id?}','User\PostController@delete');
 	Route::any('user/post/index{query?}','User\PostController@index');
+	// post
+	Route::any('user/post-sp/create','User\PostSPController@create');
+	Route::any('user/post-sp/edit/{post_id?}','User\PostSPController@edit');
+	Route::any('user/post-sp/show/{post_id?}','User\PostSPController@show');
+	Route::any('user/post-sp/delete/{post_id?}','User\PostSPController@delete');
+	Route::any('user/post-sp/index{query?}','User\PostSPController@index');
 	// media
 	Route::any('user/media/create','User\MediaController@create');
 	Route::any('user/media/edit/{media_id?}','User\MediaController@edit');

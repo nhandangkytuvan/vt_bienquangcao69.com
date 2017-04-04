@@ -6,7 +6,7 @@
 <form method="post"  enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="panel panel-default">
-        <div class="panel-heading text-center">Tạo bài viết mới</div>
+        <div class="panel-heading text-center">Sửa lại</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-6">
@@ -19,11 +19,27 @@
                     </div>
                 </div>
                 <div class="col-sm-6" id="image-holder">
+                    @if($data['post']->post_avatar)
+                    <img src="{{ asset('public/img/'.$data['post']->post_avatar) }}" class="img-responsive img-thumbnail center-block">
+                    @endif
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group clearfix">
+                <a class="pull-right label label-info" target="_blank"  
+                    href="{{ url($data['post']->post_alias.'/'.$data['post']->id.'.htm') }}" class="pull-right">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    Xem bài
+                </a>
                 <label class="control-label">Tên bài</label>
-                <input type="text" class="form-control" name="post_name" placeholder="Tiêu đề bài viết" value="{{ old('post_name') }}">
+                <input type="text" class="form-control" name="post_name" value="{{ $data['post']->post_name }}">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Giá sản phẩm</label>
+                        <input type="number" class="form-control" name="post_price" value="{{ $data['post']->postSP->post_price }}">
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-8">
@@ -33,13 +49,13 @@
                             <option value="">Chọn danh mục</option>
                             @foreach($data['terms'] as $key=> $term)
                                 @if($term->term_id == 0)
-                                    <option value="{{ $term->id }}">{{ $term->term_name }}</option>
+                                    <option {{ $data['post']->term_id == $term->id ? 'selected' : '' }} value="{{ $term->id }}">{{ $term->term_name }}</option>
                                     @foreach($data['terms'] as $key2=> $term2)
                                         @if($term2->term_id == $term->id)
-                                            <option value="{{ $term2->id }}">--{{ $term2->term_name }}</option>
+                                            <option {{ $data['post']->term_id == $term2->id ? 'selected' : '' }} value="{{ $term2->id }}">--{{ $term2->term_name }}</option>
                                             @foreach($data['terms'] as $key3=> $term3)
                                                 @if($term3->term_id == $term2->id)
-                                                    <option value="{{ $term2->id }}">----{{ $term2->term_name }}</option>
+                                                    <option {{ $data['post']->term_id == $term3->id ? 'selected' : '' }} value="{{ $term2->id }}">----{{ $term2->term_name }}</option>
                                                     @php unset($data['terms'][$key3]) @endphp
                                                 @endif
                                             @endforeach
@@ -57,15 +73,15 @@
                             <label class="control-label label label-success" for="post_status">Đăng bài</label>
                         </p>
                         <div class="material-switch">
-                            <input id="post_status" type="checkbox" name="post_status" value="1">
-                            <label for="post_status" class="label-success"></label>
+                            <input id="post_status" type="checkbox" name="post_status" value="1" {{ $data['post']->post_status == 1 ? 'checked' : '' }}>
+                            <label for="post_status" class="label-danger"></label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label">Tóm tắt</label>
-                <textarea type="text" class="form-control autosize" name="post_description">{{ old('post_description') }}</textarea>
+                <textarea type="text" class="form-control autosize" name="post_description">{{ $data['post']->post_description }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Chi tiết 
@@ -73,7 +89,7 @@
                         <span class="glyphicon glyphicon-info-sign"></span>
                     </a>
                 </label>
-                <textarea type="text" class="form-control" name="post_detail" id="post_detail">{{ old('post_detail') }}</textarea>
+                <textarea type="text" class="form-control" name="post_detail" id="post_detail">{{ $data['post']->post_detail }}</textarea>
                 <script>
                     $(document).ready(function($) {
                         tinymce.init({
@@ -103,10 +119,11 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control autosize" name="post_keyword">{{ old('post_keyword') }}</textarea>
+                <textarea type="text" class="form-control autosize" name="post_keyword">{{ $data['post']->post_keyword }}</textarea>
             </div>
             <div class="form-group">
-                <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-edit"></span>  Thêm bài viết</button>
+                <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-edit"></span>  Sửa bài viết</button>
+                
             </div>
         </div>
     </div>

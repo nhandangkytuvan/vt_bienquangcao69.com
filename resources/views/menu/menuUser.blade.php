@@ -32,6 +32,8 @@
         <ul class="list-group">
             <li class="list-group-item"><a href="{{ url('user/post/create') }}"><i class="glyphicon glyphicon-edit"></i> Viết bài mới</a></li>
             <li class="list-group-item"><a href="{{ url('user/post/index') }}"><i class="glyphicon glyphicon-sort-by-alphabet"></i> Danh sách bài viết</a></li>
+            <li class="list-group-item"><a href="{{ url('user/post-sp/create') }}"><i class="fa fa-shopping-basket"></i> Viết sản phẩm</a></li>
+            <li class="list-group-item"><a href="{{ url('user/post-sp/index') }}"><i class="glyphicon glyphicon-sort-by-alphabet"></i> Danh sách sản phẩm</a></li>
             <li class="list-group-item"><a href="{{ url('user/media/create') }}"><i class="fa fa-cloud-upload"></i> Gửi ảnh</a></li>
             <li class="list-group-item"><a href="{{ url('user/media/index?view=icon') }}"><i class="glyphicon glyphicon-picture"></i> Thư viện ảnh</a></li>
             <li class="list-group-item"><a href="{{ url('user/user/edit') }}"><i class="glyphicon glyphicon-user"></i> Sửa tài khoản</a></li>

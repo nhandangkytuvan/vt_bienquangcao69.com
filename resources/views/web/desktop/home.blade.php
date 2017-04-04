@@ -15,36 +15,13 @@
 	<main class="container home">
 		<div class="post-sps">
 			<div class="flex flex1 flex-wrap-wrap justify-content-between">
+				@foreach($data['posts'] as $post)
 				<div class="flex1col1">
-					<h3 class="text-uppercase post-name text-center"><a href="">Biển quảng cáo cửa hàng</a></h3>
-					<h3 class="post-avatar"><a href=""><img src="{{ asset('public/images/desktop/sp-1.png') }}" class="center-block img-responsive"></a></h3>
-					<h4 class="text-center text-uppercase post-price">350.000 VNĐ</h4>
+					<h3 class="text-uppercase post-name text-center"><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
+					<h3 class="post-avatar"><a href="{{ MyAPI::getUrlPost($post->id) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
+					<h4 class="text-center text-uppercase post-price">{{ $post->postSP->post_price }} VNĐ</h4>
 				</div>
-				<div class="flex1col1">
-					<h3 class="text-uppercase post-name text-center"><a href="">Biển quảng cáo cửa hàng</a></h3>
-					<h3 class="post-avatar"><a href=""><img src="{{ asset('public/images/desktop/sp-2.png') }}" class="center-block img-responsive"></a></h3>
-					<h4 class="text-center text-uppercase post-price">350.000 VNĐ</h4>
-				</div>
-				<div class="flex1col1">
-					<h3 class="text-uppercase post-name text-center"><a href="">Biển quảng cáo cửa hàng</a></h3>
-					<h3 class="post-avatar"><a href=""><img src="{{ asset('public/images/desktop/sp-3.png') }}" class="center-block img-responsive"></a></h3>
-					<h4 class="text-center text-uppercase post-price">350.000 VNĐ</h4>
-				</div>
-				<div class="flex1col1">
-					<h3 class="text-uppercase post-name text-center"><a href="">Biển quảng cáo cửa hàng</a></h3>
-					<h3 class="post-avatar"><a href=""><img src="{{ asset('public/images/desktop/sp-4.png') }}" class="center-block img-responsive"></a></h3>
-					<h4 class="text-center text-uppercase post-price">350.000 VNĐ</h4>
-				</div>
-				<div class="flex1col1">
-					<h3 class="text-uppercase post-name text-center"><a href="">Biển quảng cáo cửa hàng</a></h3>
-					<h3 class="post-avatar"><a href=""><img src="{{ asset('public/images/desktop/sp-5.png') }}" class="center-block img-responsive"></a></h3>
-					<h4 class="text-center text-uppercase post-price">350.000 VNĐ</h4>
-				</div>
-				<div class="flex1col1">
-					<h3 class="text-uppercase post-name text-center"><a href="">Biển quảng cáo cửa hàng</a></h3>
-					<h3 class="post-avatar"><a href=""><img src="{{ asset('public/images/desktop/sp-6.png') }}" class="center-block img-responsive"></a></h3>
-					<h4 class="text-center text-uppercase post-price">350.000 VNĐ</h4>
-				</div>
+				@endforeach
 				<div class="flex1col1">
 				</div>
 				<div class="flex1col1">

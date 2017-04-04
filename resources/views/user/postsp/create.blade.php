@@ -6,7 +6,7 @@
 <form method="post"  enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="panel panel-default">
-        <div class="panel-heading text-center">Tạo bài viết mới</div>
+        <div class="panel-heading text-center">Tạo mới</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-6">
@@ -22,8 +22,16 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label">Tên bài</label>
-                <input type="text" class="form-control" name="post_name" placeholder="Tiêu đề bài viết" value="{{ old('post_name') }}">
+                <label class="control-label">Tên sản phẩm</label>
+                <input type="text" class="form-control" name="post_name" value="{{ old('post_name') }}">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Giá sản phẩm</label>
+                        <input type="number" class="form-control" name="post_price" value="{{ old('post_price') }}">
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-8">
@@ -69,7 +77,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Chi tiết 
-                    <a href="#"  data-toggle="tooltip" data-placement="top" title="Tiêu đề bài viết không cần viết trong đây">
+                    <a href="#"  data-toggle="tooltip" data-placement="top" title="Tiêu đề không cần viết trong đây">
                         <span class="glyphicon glyphicon-info-sign"></span>
                     </a>
                 </label>

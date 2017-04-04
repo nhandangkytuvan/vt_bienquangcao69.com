@@ -12,7 +12,7 @@ class HomeController extends Controller{
 	public function show(Request $request){
 		$setting = Setting::first();
 		$data['request'] = $request;
-		$data['home'] = true;
+		$data['posts'] = Post::where('post_group',1)->limit(12)->get();
 		$data['setting'] = $setting;
 		if(BrowserDetect::isDesktop()){
 			return view('web.desktop.home',['data'=>$data]);

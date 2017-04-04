@@ -3,12 +3,13 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
+use App\PostSP;
 use App\User;
 use App\Term;
 use File;
 use Gate;
 use Session;
-class PostController extends Controller{
+class PostSPController extends Controller{
     public function create(Request $request){
         $user = Session::get('user');
     	$terms = Term::get();
@@ -19,7 +20,7 @@ class PostController extends Controller{
             $post->term_id = $request->input('term_id');
             $post->post_name = $request->input('post_name');
             $post->post_alias = str_slug($request->input('post_name'),'-');
-            $post->post_group = 0;//bai viet
+            $post->post_group = 1;//sp
             $post->post_description = $request->input('post_description');
             $post->post_detail = $request->input('post_detail');
             $post->post_keyword = $request->input('post_keyword');
@@ -37,7 +38,13 @@ class PostController extends Controller{
             }
             if($post->save()){
                 Session::flash('success','Thêm thành công.');
-                return redirect('user/post/edit/'.$post->id);
+                //
+                $postsp = new PostSP;
+                $postsp->post_id = $post->id;
+                $postsp->post_price = $request->input('post_price');
+                $postsp->save();
+                
+                return redirect('user/post-sp/edit/'.$post->id);
             }else{
                 Session::flash('error','Thêm lỗi.');
                 return back();
@@ -45,7 +52,7 @@ class PostController extends Controller{
         }else{
             $data['user'] = $user;
             $data['terms'] = $terms;
-            return view('user.post.create',['data'=>$data]); 
+            return view('user.postsp.create',['data'=>$data]); 
         }
     }
     public function edit($post_id,Request $request){
@@ -61,7 +68,7 @@ class PostController extends Controller{
             $post->term_id = $request->input('term_id');
             $post->post_name = $request->input('post_name');
             $post->post_alias = str_slug($request->input('post_name'),'-');
-            $post->post_group = 0;//bai viet
+            $post->post_group = 1;//sp
             $post->post_description = $request->input('post_description');
             $post->post_detail = $request->input('post_detail');
             $post->post_keyword = $request->input('post_keyword');
@@ -78,7 +85,12 @@ class PostController extends Controller{
             }
             if($post->save()){
                 Session::flash('success','Sửa thành công.');
-                return redirect('user/post/edit/'.$post->id);
+                //
+                $postsp = $post->postSP;
+                $postsp->post_price = $request->input('post_price');
+                $postsp->save();
+                //
+                return redirect('user/post-sp/edit/'.$post->id);
             }else{
                 Session::flash('error','Sửa lỗi.');
                 return back();
@@ -87,14 +99,14 @@ class PostController extends Controller{
             $data['user'] = $user;
         	$data['post'] = $post;
             $data['terms'] = $terms;
-            return view('user.post.edit',['data'=>$data]); 
+            return view('user.postsp.edit',['data'=>$data]); 
         }
     }
     public function index(Request $request){
         $user = Session::get('user');
         $users = User::get();
         $terms = Term::get();
-        $posts = Post::where('post_group',0)->orderby('id','desc');
+        $posts = Post::where('post_group',1)->orderby('id','desc');
         if($request->input('post_name')){
             $posts = $posts->where('post_name','like','%'.$request->input('post_name').'%');
         }
@@ -124,11 +136,11 @@ class PostController extends Controller{
         $data['posts'] = $posts;
         $data['terms'] = $terms; 
         if($request->input('view')=='list'){
-            return view('user.post.indexList',['data'=>$data]);
+            return view('user.postsp.indexList',['data'=>$data]);
         }elseif($request->input('view')=='icon'){
-            return view('user.post.indexIcon',['data'=>$data]);
+            return view('user.postsp.indexIcon',['data'=>$data]);
         }else{
-            return view('user.post.indexList',['data'=>$data]);
+            return view('user.postsp.indexList',['data'=>$data]);
         }
     }
     public function delete($post_id,Request $request){
@@ -142,14 +154,14 @@ class PostController extends Controller{
             if($post->delete()){
                 Session::flash('success','Xóa thành công.');
                 File::delete(public_path().'/img/'.$post->post_avatar);
-                return redirect('user/post/index');
+                return redirect('user/post-sp/index');
             }else{
                 Session::flash('error','Xóa lỗi.');
                 return back();
             }
         }else{
             $data['post'] = $post;
-            return view('user.post.delete',['data'=>$data]); 
+            return view('user.postsp.delete',['data'=>$data]); 
         }
     }
 }

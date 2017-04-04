@@ -67,7 +67,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <p style="margin-top: 5px;">
-                            <label class="control-label label label-success" for="post_status">Đăng bài lên</label>
+                            <label class="control-label label label-success" for="post_status">Đăng bài</label>
                         </p>
                         <div class="material-switch">
                             <input id="post_status" type="checkbox" name="post_status" value="1" {{ $data['post']->post_status == 1 ? 'checked' : '' }}>

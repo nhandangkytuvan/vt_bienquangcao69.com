@@ -31,6 +31,12 @@ class TermController extends Controller{
                 case 12:
                     return view('web.desktop.new',['data'=>$data]); 
                     break;
+                case 13:
+                    return view('web.desktop.new',['data'=>$data]); 
+                    break;
+                case 14:
+                    return view('web.desktop.new',['data'=>$data]); 
+                    break;
                 default:
                     return view('web.desktop.product',['data'=>$data]); 
                     break;

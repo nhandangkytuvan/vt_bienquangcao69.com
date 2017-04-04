@@ -51,8 +51,8 @@
     <div class="panel-heading text-center">
         <a href="#" class="pull-left"> <span class="label label-success">Tông: {{ $data['posts']->total() }}</span> </a>
         Danh sách bài viết
-        <a href="{{ url('user/post/index?view=icon') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-large"></span> </a>
-        <a href="{{ url('user/post/index?view=list') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-list"></span> </a>
+        <a href="{{ url('user/post-sp/index?view=icon') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-large"></span> </a>
+        <a href="{{ url('user/post-sp/index?view=list') }}" class="pull-right" style="margin-left: 5px;"> <span class="glyphicon glyphicon-th-list"></span> </a>
     </div>
     <table class="table table-bordered">
         <tr class="active">
@@ -93,12 +93,12 @@
                                     </a> 
                                 </li> 
                                 <li>
-                                    <a href="{{ url('user/post/edit/'.$post->id) }}">
+                                    <a href="{{ url('user/post-sp/edit/'.$post->id) }}">
                                         <span class="glyphicon glyphicon-pencil"></span> Sửa bài viết
                                     </a> 
                                 </li> 
                                 <li>
-                                    <a href="{{ url('user/post/delete/'.$post->id) }}">
+                                    <a href="{{ url('user/post-sp/delete/'.$post->id) }}">
                                         <span class="glyphicon glyphicon-trash"></span> Xóa bài viết
                                     </a> 
                                 </li>

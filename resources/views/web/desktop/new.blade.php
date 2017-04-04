@@ -8,6 +8,7 @@
 <meta id="metaKeywords" name="keywords" content="{{ $data['term']->term_keyword }}">
 @endsection('keyword')
 @section('css')
+<link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-pagination.css') }}">
 <link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-slidebar.css') }}">
 <link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-new.css') }}">
 @endsection('css')
@@ -20,7 +21,7 @@
 			@include('web.desktop.slidebar')
 		</div>
 		<div class="flex1col2">
-			<h3 class="text-center text-uppercase">Tin tức</h3>
+			<h3 class="text-center text-uppercase">{{ $data['term']->term_name }}</h3>
 			<div class="posts">
 				<div class="post">
 					<div class="flex flex2 justify-content-between">
@@ -87,6 +88,25 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="my_pagination">
+				<ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li class="active"><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				</ul>
 			</div>
 		</div>
 	</div>
