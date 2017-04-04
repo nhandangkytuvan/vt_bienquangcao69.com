@@ -3,6 +3,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Setting;
 use App\Term;
+use App\Post;
 use View;
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(){
         View::share('setting',Setting::first());
         View::share('product',Term::find(1));
+        View::share('posts_sidebar',Post::where('post_group',1)->limit(5)->get());
     }
     /**
      * Register any application services.

@@ -1,37 +1,11 @@
 <div class="slidebar">
+	@foreach($posts_sidebar as $post)
 	<div class="post">
-		<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
+		<h3 class="text-center text-uppercase post-name">{{ $post->post_name }}</h3>
 		<h3 class="post-avatar">
-			<a href=""><img src="{{ asset('public/images/desktop/home-2.png') }}" class="center-block img-responsive"></a>
+			<a href="{{ MyAPI::getUrlPost($post->id) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a>
 		</h3>
-		<h4 class="text-center post-price">450.000VNĐ/M2</h4>
+		<h4 class="text-center post-price">{{ number_format($post->postSP->post_price) }} VNĐ</h4>
 	</div>
-	<div class="post">
-		<h3 class="text-center text-uppercase post-name">Biển quảng cáo bạt Hillex</h3>
-		<h3 class="post-avatar">
-			<a href=""><img src="{{ asset('public/images/desktop/home-3.png') }}" class="center-block img-responsive"></a>
-		</h3>
-		<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-	</div>
-	<div class="post">
-		<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
-		<h3 class="post-avatar">
-			<a href=""><img src="{{ asset('public/images/desktop/home-2.png') }}" class="center-block img-responsive"></a>
-		</h3>
-		<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-	</div>
-	<div class="post">
-		<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
-		<h3 class="post-avatar">
-			<a href=""><img src="{{ asset('public/images/desktop/home-3.png') }}" class="center-block img-responsive"></a>
-		</h3>
-		<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-	</div>
-	<div class="post">
-		<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
-		<h3 class="post-avatar">
-			<a href=""><img src="{{ asset('public/images/desktop/home-2.png') }}" class="center-block img-responsive"></a>
-		</h3>
-		<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-	</div>
+	@endforeach
 </div>
