@@ -40,8 +40,23 @@
 					<div class="flex1col1 flex align-items-center justify-content-center">
 						<div><h3><a href="#" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
 					</div>
-					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Sản phẩm</a></h3></div>
+					<div class="flex1col1 flex align-items-center justify-content-center menu-items active">
+						<div class="pos-relative">
+							<h3><a href="#" class="flex align-items-center justify-content-center">Sản phẩm</a></h3>
+							<div class="menu-item pos-absolute">
+								<ul>
+									<li><h3><a href="">Biển quảng cáo hộp đèn</a></h3></li>
+									<li><h3><a href="">Biển quảng cáo bạt hiflex</a></h3></li>
+									<li><h3><a href="">Biển quảng cáo chữ nổi đồng, inox</a></h3></li>
+									<li><h3><a href="">BIỂN LED</a></h3></li>
+									<li><h3><a href="">Biển quảng cáo Công ty</a></h3></li>
+									<li><h3><a href="">Biển quảng cáo cửa hàng</a></h3></li>
+									<li><h3><a href="">Biển alu gắn chữ nổi</a></h3></li>
+									<li><h3><a href="">Treo phướn (băng rôn)</a></h3></li>
+									<li><h3><a href="">Gian hàng hội chợ, triển lãm</a></h3></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
 						<div><h3><a href="#" class="flex align-items-center justify-content-center">Công trình mới</a></h3></div>
@@ -75,23 +90,63 @@
 					</div>
 				</div>
 				<div class="flex1col2">
-					<div></div>
-					<div>
+					<div class="search">
+						<form action="">
+							<div class="flex">
+								<div class="col1">
+									
+								</div>
+								<div class="col2">
+									<input type="text" placeholder="Từ khóa...">
+								</div>
+								<div class="col3">
+									<button type="submit">Tìm kiếm</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="myslide">
 						<img src="{{ asset('public/images/desktop/home-1.png') }}" class="center-block img-responsive">
 					</div>
 				</div>
 				<div class="flex1col3">
 					<h3 class="text-center title1">Tư vấn trực tuyến</h3>
-					<div>
-						<ul class="phone">
-							<li><h4><i class=""></i><a href="">09 232 99998</a></h4></li>
-							<li><h4><i class=""></i><a href="">09 112 88886</a></h4></li>
-							<li><h4><i class=""></i><a href="">012 02 888886</a></h4></li>
-						</ul>
-						<ul class="mail">
-							<li><h4><i class=""></i><a href="">bienquangcao69@gmail.com</a></h4></li>
-							<li><h4><i class=""></i><a href="">bienquangcao69</a></h4></li>
-						</ul>
+					<div class="phone">
+						<div class="flex flex2 justify-content-between">
+							<div class="flex2col1 flex justify-content-center align-items-center">
+								<h3><a href=""><i></i></a></h3>
+							</div>
+							<div class="flex2col2 flex align-items-center">
+								<div>
+									<h3><a href="">09 232 99998</a></h3>
+									<h3><a href="">09 112 88886</a></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="email">
+						<div class="flex flex2 justify-content-between">
+							<div class="flex2col1 flex justify-content-center align-items-center">
+								<h3><a href=""><i></i></a></h3>
+							</div>
+							<div class="flex2col2 flex align-items-center">
+								<div>
+									<h3><a href="">bienquangcao69<br>@gmail.com</a></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="skype">
+						<div class="flex flex2 justify-content-between">
+							<div class="flex2col1 flex justify-content-center align-items-center">
+								<h3><a href=""><i></i></a></h3>
+							</div>
+							<div class="flex2col2 flex align-items-center">
+								<div>
+									<h3><a href="">bienquangcao69</a></h3>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -103,7 +158,10 @@
 			<div class="khach-hang">
 				<h3 class="text-uppercase text-center">Khách hàng - Đối tác</h3>
 				<div class="flex flex1 justify-content-between">
-					<div class="flex1col1">
+					<div>
+						<img src="{{ asset('public/images/desktop/home-4.png') }}" class="center-block img-responsive">
+					</div>
+					<!-- <div class="flex1col1">
 						<h4><i></i></h4>
 					</div>
 					<div class="flex1col1">
@@ -129,7 +187,7 @@
 					</div>
 					<div class="flex1col1">
 						<h4><i></i></h4>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<menu>

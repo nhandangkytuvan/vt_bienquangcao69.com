@@ -1,3 +1,10 @@
+footer .container{
+	background-color: #fff;
+	padding-top: 20px;
+}
+footer .khach-hang{
+	padding:0px 5px;
+}
 footer .khach-hang h3{
 	display: inline-block;
 	padding:0px 10px;
@@ -7,7 +14,8 @@ footer .khach-hang h3{
 	background-color: #228f0f;
 }
 footer .khach-hang >div{
-	margin-top: 20px;
+	padding: 20px 0px;
+/*	border-top: 1px solid #d8d5d5;*/
 }
 /**/
 footer menu{
@@ -18,10 +26,6 @@ footer menu .flex1 .flex1col1 a{
 	color: #fff;
 	font-size: 16px;
 	font-weight: normal;
-}
-/**/
-footer .container{
-	background-color: #fff;
 }
 /**/
 footer .footer{
@@ -44,5 +48,5 @@ footer .footer .flex1col2 p{
 }
 footer .footer-status{
 	background-color: #228f0f;
-	height: 25px;
+	height: 5px;
 }

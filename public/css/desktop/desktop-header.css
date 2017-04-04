@@ -1,14 +1,52 @@
+header{
+	border-bottom: 1px solid #d8d5d5;
+}
 header menu{
 	background-color: #228f0f;
 }
-header menu .flex1 .flex1col1 a{
+header menu .flex1 .flex1col1{
+	width: 16.67%;
+}
+header menu .flex1 .flex1col1 div{
+	width: 100%;
+}
+header menu .flex1 .flex1col1 >div >h3>a{
 	height: 50px;
 	color: #fff;
 	font-size: 16px;
 	font-weight: normal;
+	width: 100%;
 } 
+header menu .flex1 .flex1col1 div.menu-item{
+	display: none;
+}
+header menu .flex1 .flex1col1:hover div.menu-item{
+	display: block;
+}
+header menu .flex1 .flex1col1:hover,header menu .flex1 .flex1col1.active{
+	background-color: #0e5f00;
+}
+header menu .flex1 .flex1col1 div.menu-item ul{
+	list-style: none;
+	background-color: #259012;
+	width: 220px;
+}
+header menu .flex1 .flex1col1 div.menu-item ul li{
+	border-bottom: 1px solid #57aa49;
+}
+header menu .flex1 .flex1col1 div.menu-item ul li h3 a{
+	padding:5px 10px;
+	font-weight: normal;
+	font-size: 14px;
+	display: block;
+	color: #fff;
+}
+header menu .flex1 .flex1col1 div.menu-item ul li:hover{
+	background-color: #0e5f00;
+}
 /**/
 header .danhmuc .flex1 .flex1col1{
+	padding:0px 5px;
 	padding-top: 18px;
 	background-color: #fff;
 	width: 260px;
@@ -36,6 +74,9 @@ header .danhmuc .flex1 .flex1col1 ul li h4{
 header .danhmuc .flex1 .flex1col1 ul li i{
 	position: absolute;
 	left: 0px;
+	color: red;
+	font-size: 12px;
+	top:2px;
 }
 header .danhmuc .flex1 .flex1col1 ul li:last-child{
 	border-bottom: none;
@@ -50,36 +91,77 @@ header .danhmuc .flex1 .flex1col2{
 	background-color: #fff;
 	width: 475px;
 }
-header .danhmuc .flex1 .flex1col2 >div:nth-child(1){
+header .danhmuc .flex1 .flex1col2 >div.search{
 	height: 33px;
 	border:1px solid #686a15;
 }
-header .danhmuc .flex1 .flex1col2 >div:nth-child(2){
-	margin-top: 5px;
+header .danhmuc .flex1 .flex1col2 >div.search div.col1{
+	width: 35px;height: 31px;
+	background-image: url('../../images/desktop/icon-1.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+header .danhmuc .flex1 .flex1col2 >div.search div.col2 input{
+	outline: none;
+	border:none;
+	height: 31px;
+	padding-left: 10px;
+	width: 343px;
+}
+header .danhmuc .flex1 .flex1col2 >div.search div.col3 button{
+	border:none;
+	outline: none;
+	background-color: #228f0f;
+	font-style: italic;
+	color: #fff;
+	text-align: center;
+	height: 31px;line-height: 31px;
+	width: 85px;
+}
+header .danhmuc .flex1 .flex1col2 >div.myslide{
+	margin-top: 20px;
 	padding-bottom: 10px;
 }
 /**/
 header .danhmuc .flex1 .flex1col3{
+	padding:0px 5px;
 	padding-top: 18px;
 	background-color: #fff;
 	width: 240px;
 }
-header .danhmuc .flex1 .flex1col3 ul{
-	list-style: none;
-	padding:0px 10px;
+header .danhmuc .flex1 .flex1col3 .flex2col1{
+	width: 70px;
 }
-header .danhmuc .flex1 .flex1col3 ul li{
-	padding: 5px;
+header .danhmuc .flex1 .flex1col3 .flex2col1 a{
+	display: block;
+	width: 100%;
 }
-header .danhmuc .flex1 .flex1col3 ul.phone li i{
-	display: inline-block;
-	background-image: url('../../images/desktop/icon-1.png');
-	width: 14px;
-	height: 15px;
-	vertical-align: -1px;
-	margin-right: 5px;
+header .danhmuc .flex1 .flex1col3 .flex2col1 a i{
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #f58500;
+	background-image: url('../../images/desktop/icon-2.png');
+	background-position: 12px 12px;
+	background-repeat: no-repeat;
 }
-header .danhmuc .flex1 .flex1col3 ul li a{
-	color: red;
+header .danhmuc .flex1 .flex1col3 .email .flex2col1 a i{
+	background-position: 14px -74px;
+	background-color: #228f0f;
+}
+header .danhmuc .flex1 .flex1col3 .skype .flex2col1 a i{
+	background-position: 14px -171px;
+	background-color: #1b93d8;
+}
+header .danhmuc .flex1 .flex1col3 .flex2col2{
+	width: 150px;
+}
+header .danhmuc .flex1 .flex1col3 .flex2col2 h3{
 	font-weight: normal;
+	color: #c31212;
+	font-size: 14px;
 }
+header .danhmuc .flex1 .flex1col3 >div{
+	margin-top: 20px;
+} 

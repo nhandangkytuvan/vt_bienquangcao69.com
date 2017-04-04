@@ -1,0 +1,81 @@
+.home{
+	background-color: #fff;
+}
+.home .post-sps .flex1{
+	padding:20px 0px;
+}
+.home .post-sps .flex1 .flex1col1{
+	width: 25%;
+	border:1px solid #d8d5d5;
+	padding:15px;
+	border-top: none;
+	border-left: none;
+}
+.home .post-sps .flex1 .flex1col1:nth-child(4n){
+	border-right: none;
+}
+.home .post-sps .flex1 .flex1col1 .post-name{
+	font-size: 13px;
+}
+.home .post-sps .flex1 .flex1col1 .post-avatar{
+	margin-top: 10px;
+}
+.home .post-sps .flex1 .flex1col1 .post-price{
+	font-size: 12px;
+	margin-top: 5px;
+	color: #f05c61;
+}
+/**/
+.home .post-news{
+	padding:0px 5px;
+	margin-top: 20px;
+}
+.home .post-news >h3{
+	color: #fff;
+	background-color: #228f0f;
+	padding:0px 10px;
+	height: 34px;
+	line-height: 34px;
+}
+.home .post-news .flex1{
+	margin-top: 15px;
+}
+.home .post-news .flex1col1{
+	width: 226px;
+}
+.home .post-news .flex1col1 h3{
+	font-size: 12px;
+	color: #1a70ba;
+	margin-top: 16px;
+}
+.home .post-news .flex1col1 p{
+	font-size: 12px;
+	color: #232323;
+	margin-top: 5px;
+}
+.home .post-news .flex1col2{
+	width: 380px;
+}
+.home .post-news .flex1col2 >div{
+	margin-top: 20px;
+}
+.home .post-news .flex1col2 h3{
+	font-size: 12px;
+	color: #1a70ba;
+	position: relative;
+	padding-left: 15px;
+}
+.home .post-news .flex1col2 h3 i{
+	color: red;
+	position: absolute;
+	left: 0px;top:2px;
+}
+.home .post-news .flex1col2 p{
+	margin-top: 5px;
+	font-size: 12px;
+	color: #232323;
+	padding-left:15px;
+}
+.home .post-news .flex1col3{
+	width: 339px;
+}
