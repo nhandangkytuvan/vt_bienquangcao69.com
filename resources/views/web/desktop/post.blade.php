@@ -33,6 +33,7 @@
 				{!! $data['post']->post_detail !!}
 			</div>
 			<div class="post-related">
+				<h3>Xem thêm</h3>
 				@php  
 					$term = $data['post']->term;
 					$posts = $term->post()->where('id','<>',$data['post']->id)->limit(6)->get();
