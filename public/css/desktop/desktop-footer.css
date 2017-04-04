@@ -12,6 +12,7 @@ footer .khach-hang h3{
 	line-height: 34px;
 	color: #fff;
 	background-color: #228f0f;
+	border: 1px solid #686a15;
 }
 footer .khach-hang >div{
 	padding: 20px 0px;

@@ -1,0 +1,38 @@
+.product{
+	background-color: #fff;
+	padding-top: 20px;
+}
+.product >h3{
+	display: inline-block;
+    padding: 0px 10px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    background-color: #228f0f;
+    border: 1px solid #686a15;
+    margin-left: 5px;
+}
+.product .post-sps .flex1{
+	padding:20px 0px;
+}
+.product .post-sps .flex1 .flex1col1{
+	width: 25%;
+	border:1px solid #d8d5d5;
+	padding:15px;
+	border-top: none;
+	border-left: none;
+}
+.product .post-sps .flex1 .flex1col1:nth-child(4n){
+	border-right: none;
+}
+.product .post-sps .flex1 .flex1col1 .post-name{
+	font-size: 13px;
+}
+.product .post-sps .flex1 .flex1col1 .post-avatar{
+	margin-top: 10px;
+}
+.product .post-sps .flex1 .flex1col1 .post-price{
+	font-size: 12px;
+	margin-top: 5px;
+	color: #f05c61;
+}

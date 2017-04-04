@@ -35,25 +35,25 @@
 			<div class="container">
 				<div class="flex flex1 justify-content-around">
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Trang chủ</a></h3></div>
+						<div><h3><a href="{{ url('/') }}" class="flex align-items-center justify-content-center">Trang chủ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
+						<div><h3><a href="{{ url('about') }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center menu-items active">
 						<div class="pos-relative">
-							<h3><a href="#" class="flex align-items-center justify-content-center">Sản phẩm</a></h3>
+							<h3><a href="{{ MyAPI::getUrlTerm(1) }}" class="flex align-items-center justify-content-center">Sản phẩm</a></h3>
 							<div class="menu-item pos-absolute">
 								<ul>
-									<li><h3><a href="">Biển quảng cáo hộp đèn</a></h3></li>
-									<li><h3><a href="">Biển quảng cáo bạt hiflex</a></h3></li>
-									<li><h3><a href="">Biển quảng cáo chữ nổi đồng, inox</a></h3></li>
-									<li><h3><a href="">BIỂN LED</a></h3></li>
-									<li><h3><a href="">Biển quảng cáo Công ty</a></h3></li>
-									<li><h3><a href="">Biển quảng cáo cửa hàng</a></h3></li>
-									<li><h3><a href="">Biển alu gắn chữ nổi</a></h3></li>
-									<li><h3><a href="">Treo phướn (băng rôn)</a></h3></li>
-									<li><h3><a href="">Gian hàng hội chợ, triển lãm</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(2) }}">Biển quảng cáo hộp đèn</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(3) }}">Biển quảng cáo bạt hiflex</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(4) }}">Biển quảng cáo chữ nổi đồng, inox</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(5) }}">BIỂN LED</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(6) }}">Biển quảng cáo Công ty</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(7) }}">Biển quảng cáo cửa hàng</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(8) }}">Biển alu gắn chữ nổi</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(9) }}">Treo phướn (băng rôn)</a></h3></li>
+									<li><h3><a href="{{ MyAPI::getUrlTerm(10) }}">Gian hàng hội chợ, triển lãm</a></h3></li>
 								</ul>
 							</div>
 						</div>
@@ -118,8 +118,8 @@
 							</div>
 							<div class="flex2col2 flex align-items-center">
 								<div>
-									<h3><a href="">09 232 99998</a></h3>
-									<h3><a href="">09 112 88886</a></h3>
+									<h3><a href="tel:09 232 99998">09 232 99998</a></h3>
+									<h3><a href="tel:09 112 88886">09 112 88886</a></h3>
 								</div>
 							</div>
 						</div>
@@ -131,7 +131,7 @@
 							</div>
 							<div class="flex2col2 flex align-items-center">
 								<div>
-									<h3><a href="">bienquangcao69<br>@gmail.com</a></h3>
+									<h3><a href="mailto:bienquangcao69@gmail.com">bienquangcao69<br>@gmail.com</a></h3>
 								</div>
 							</div>
 						</div>
@@ -143,7 +143,7 @@
 							</div>
 							<div class="flex2col2 flex align-items-center">
 								<div>
-									<h3><a href="">bienquangcao69</a></h3>
+									<h3><a href="skype:bienquangcao69">bienquangcao69</a></h3>
 								</div>
 							</div>
 						</div>
@@ -161,39 +161,12 @@
 					<div>
 						<img src="{{ asset('public/images/desktop/home-4.png') }}" class="center-block img-responsive">
 					</div>
-					<!-- <div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div>
-					<div class="flex1col1">
-						<h4><i></i></h4>
-					</div> -->
 				</div>
 			</div>
 			<menu>
 				<div class="flex flex1 justify-content-around">
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="#" class="flex align-items-center justify-content-center">Trang chủ</a></h3></div>
+						<div><h3><a href="{{ url('/') }}" class="flex align-items-center justify-content-center">Trang chủ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
 						<div><h3><a href="#" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
@@ -222,8 +195,8 @@
 						<h2 class="text-uppercase">QUANG CAO 69</h2>
 						<p>Điện thoại hỗ trợ: 09 232 99998 - 09 112 88886 </p>
 						<p>Email hỗ trợ: bienquangcao69@gmail.com</p>
-						<p>Trụ sở: 336 duong buoi  </p>
-						<p>Xưởng SX: 70/122 Tay Mo - Tu Liem - Ha Noi</p>
+						<p>Trụ sở: 336 đường bưởi  </p>
+						<p>Xưởng SX: 70/122 Tây Mỗ - Từ Liêm - Hà Nội</p>
 					</div>
 				</div>
 			</div>

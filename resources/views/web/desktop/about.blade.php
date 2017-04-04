@@ -9,47 +9,14 @@
 @endsection('keyword')
 @section('css')
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/hover/css/hover.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-slidebar.css') }}">
 	<link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-about.css') }}">
 @endsection('css')
 @section('content')
 	<main class="about container">
 		<div class="flex justify-content-between">
 			<div class="flex1col1">
-				<div class="post">
-					<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
-					<h3 class="post-avatar">
-						<a href=""><img src="{{ asset('public/images/desktop/home-2.png') }}" class="center-block img-responsive"></a>
-					</h3>
-					<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-				</div>
-				<div class="post">
-					<h3 class="text-center text-uppercase post-name">Biển quảng cáo bạt Hillex</h3>
-					<h3 class="post-avatar">
-						<a href=""><img src="{{ asset('public/images/desktop/home-3.png') }}" class="center-block img-responsive"></a>
-					</h3>
-					<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-				</div>
-				<div class="post">
-					<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
-					<h3 class="post-avatar">
-						<a href=""><img src="{{ asset('public/images/desktop/home-2.png') }}" class="center-block img-responsive"></a>
-					</h3>
-					<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-				</div>
-				<div class="post">
-					<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
-					<h3 class="post-avatar">
-						<a href=""><img src="{{ asset('public/images/desktop/home-3.png') }}" class="center-block img-responsive"></a>
-					</h3>
-					<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-				</div>
-				<div class="post">
-					<h3 class="text-center text-uppercase post-name">Biển quảng cáo ALU Gắn chữ nổi</h3>
-					<h3 class="post-avatar">
-						<a href=""><img src="{{ asset('public/images/desktop/home-2.png') }}" class="center-block img-responsive"></a>
-					</h3>
-					<h4 class="text-center post-price">450.000VNĐ/M2</h4>
-				</div>
+				@include('web.desktop.slidebar')
 			</div>
 			<div class="flex1col2">
 				<div>
