@@ -23,90 +23,25 @@
 		<div class="flex1col2">
 			<h3 class="text-center text-uppercase">{{ $data['term']->term_name }}</h3>
 			<div class="posts">
+				@php $posts = $data['term']->post()->paginate(8); @endphp
+				@foreach($posts as $post)
 				<div class="post">
 					<div class="flex flex2 justify-content-between">
 						<div class="flex2col1">
-							<h3><a href=""><img src="{{ asset('public/images/desktop/new-1.jpg') }}" class="center-block img-responsive"></a></h3>
+							<h3><a href="{{ MyAPI::getUrlPost($post->id) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
 						</div>
 						<div class="flex2col2">
-							<h3><a href="">Chon mica mau trang , hay mica mau den . su lua chon thong minh</a></h3>
+							<h3><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
 							<p class="text-justify">
-								Làm biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn ...
+								{{ $post->post_description }}
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="post">
-					<div class="flex flex2 justify-content-between">
-						<div class="flex2col1">
-							<h3><a href=""><img src="{{ asset('public/images/desktop/new-1.jpg') }}" class="center-block img-responsive"></a></h3>
-						</div>
-						<div class="flex2col2">
-							<h3><a href="">Chon mica mau trang , hay mica mau den . su lua chon thong minh</a></h3>
-							<p class="text-justify">
-								Làm biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn ...
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="post">
-					<div class="flex flex2 justify-content-between">
-						<div class="flex2col1">
-							<h3><a href=""><img src="{{ asset('public/images/desktop/new-1.jpg') }}" class="center-block img-responsive"></a></h3>
-						</div>
-						<div class="flex2col2">
-							<h3><a href="">Chon mica mau trang , hay mica mau den . su lua chon thong minh</a></h3>
-							<p class="text-justify">
-								Làm biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn ...
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="post">
-					<div class="flex flex2 justify-content-between">
-						<div class="flex2col1">
-							<h3><a href=""><img src="{{ asset('public/images/desktop/new-1.jpg') }}" class="center-block img-responsive"></a></h3>
-						</div>
-						<div class="flex2col2">
-							<h3><a href="">Chon mica mau trang , hay mica mau den . su lua chon thong minh</a></h3>
-							<p class="text-justify">
-								Làm biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn ...
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="post">
-					<div class="flex flex2 justify-content-between">
-						<div class="flex2col1">
-							<h3><a href=""><img src="{{ asset('public/images/desktop/new-1.jpg') }}" class="center-block img-responsive"></a></h3>
-						</div>
-						<div class="flex2col2">
-							<h3><a href="">Chon mica mau trang , hay mica mau den . su lua chon thong minh</a></h3>
-							<p class="text-justify">
-								Làm biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn biển quảng cáo mica luôn là sự lựa chọn ...
-							</p>
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 			<div class="my_pagination">
-				<ul class="pagination">
-				    <li>
-				      <a href="#" aria-label="Previous">
-				        <span aria-hidden="true">&laquo;</span>
-				      </a>
-				    </li>
-				    <li class="active"><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				    <li><a href="#">4</a></li>
-				    <li><a href="#">5</a></li>
-				    <li>
-				      <a href="#" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				      </a>
-				    </li>
-				</ul>
+				{{ $posts->links() }}
 			</div>
 		</div>
 	</div>

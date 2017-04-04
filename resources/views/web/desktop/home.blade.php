@@ -14,18 +14,14 @@
 @section('content')
 	<main class="container home">
 		<div class="post-sps">
-			<div class="flex flex1 flex-wrap-wrap justify-content-between">
+			<div class="flex flex1 flex-wrap-wrap">
 				@foreach($data['posts'] as $post)
 				<div class="flex1col1">
 					<h3 class="text-uppercase post-name text-center"><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
-					<h3 class="post-avatar"><a href="{{ MyAPI::getUrlPost($post->id) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
-					<h4 class="text-center text-uppercase post-price">{{ $post->postSP->post_price }} VNĐ</h4>
+					<h3 class="post-avatar"><a href="{{ MyAPI::getUrlPost($post->id) }}" class="hvr-float-shadow"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
+					<h4 class="text-center text-uppercase post-price">{{ number_format ($post->postSP->post_price,0,',','.') }} VNĐ</h4>
 				</div>
 				@endforeach
-				<div class="flex1col1">
-				</div>
-				<div class="flex1col1">
-				</div>
 			</div>
 		</div>
 		<div class="post-news">

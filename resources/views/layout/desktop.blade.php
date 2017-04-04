@@ -177,8 +177,8 @@
 						<h2><a href="#"><img src="{{ asset('public/images/desktop/footer-1.png') }}" class="center-block img-responsive"></a></h2>
 					</div>
 					<div class="flex1col2">
-						<h2 class="text-uppercase">DOANH NGHIEP TRUYỀN THÔNG VÀ ĐẦU TƯ </h2>
-						<h2 class="text-uppercase">QUANG CAO 69</h2>
+						<h2 class="text-uppercase">DOANH NGHIỆP TRUYỀN THÔNG VÀ ĐẦU TƯ </h2>
+						<h2 class="text-uppercase">QUẢNG CÁO 69</h2>
 						<p>Điện thoại hỗ trợ: 09 232 99998 - 09 112 88886 </p>
 						<p>Email hỗ trợ: bienquangcao69@gmail.com</p>
 						<p>Trụ sở: 336 đường bưởi  </p>
