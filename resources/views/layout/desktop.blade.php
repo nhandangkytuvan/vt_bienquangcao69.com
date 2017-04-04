@@ -38,7 +38,7 @@
 					<div class="flex1col1 flex align-items-center justify-content-center">
 						<div><h3><a href="{{ url('about') }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
 					</div>
-					<div class="flex1col1 flex align-items-center justify-content-center menu-items active">
+					<div class="flex1col1 flex align-items-center justify-content-center menu-items">
 						<div class="pos-relative">
 							<h3><a href="{{ MyAPI::getUrlTerm(1) }}" class="flex align-items-center justify-content-center">Sản phẩm</a></h3>
 							<div class="menu-item pos-absolute">

@@ -23,6 +23,23 @@
     margin-bottom: 10px;
 }
 /**/
+.posts .flex1col2 .post-footer >div{
+    margin-bottom: 35px;
+}
+.posts .flex1col2 .post-footer >div p{
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.posts .flex1col2 .post-footer >div h4{
+    margin-bottom: 10px;
+}
+.posts .flex1col2 .post-footer >div h3{
+    margin-bottom: 10px;
+}
+/**/
+.posts .flex1col2 .post-related{
+    margin-top: 20px;
+}
 .posts .flex1col2 .post-related >h3{
     display: inline-block;
     padding: 0px 10px;
@@ -38,7 +55,7 @@
 }
 .posts .flex1col2 .post-related ul{
     list-style:none;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left: 0px;
 }
 .posts .flex1col2 .post-related ul li{
@@ -48,20 +65,20 @@
     position: relative;padding-left: 15px;
 }
 .posts .flex1col2 .post-related ul li h5 i{
-    font-size: 5px;
+    font-size: 8px;
     vertical-align: 3px;
     padding-right: 10px;
     position: absolute;
     left: 0px;
-    top:6px;
+    top:5px;
+    color: #0869b4;
 }
 .posts .flex1col2 .post-related ul li h5:hover i{
     color: red;
 }
 .posts .flex1col2 .post-related ul li h5 a{
     font-size: 14px;
-    color: #000;
-    font-weight: normal;
+    color: #0869b4;
 }
 .posts .flex1col2 .post-related ul li h5 a:hover{
     color: red;

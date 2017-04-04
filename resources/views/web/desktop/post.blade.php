@@ -32,12 +32,38 @@
 			<div class="post-detail">
 				{!! $data['post']->post_detail !!}
 			</div>
+			<div class="post-footer">
+				<div>
+					<h3>CÔNG TY TNHH TRUYỀN THÔNG VÀ ĐẦU TƯ MŨI TÊN VÀNG</h3>
+					<p>Điện thoại hỗ trợ: 091.787.5995/ 0462.948.759 - Fax: 04.6686 0351</p>
+					<p>Email hỗ trợ: sale@muitenvang.vn - dzung.tq@muitenvang.vn</p>
+					<p>Trụ sở: 17/435 Hồng Hà, Phúc Tân, Hoàn Kiếm, Hà Nội</p>
+					<p>Xưởng SX: 70/68 Ngọc Thụy, Long Biên, Hà Nội</p>
+				</div>
+			</div>
+			<div>
+				<!-- Load Facebook SDK for JavaScript -->
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+				<!-- Your embedded comments code -->
+				<div class="fb-comment-embed"
+				   data-href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185"
+				   data-width="auto"></div>
+			</div>
+			@php  
+				$term = $data['post']->term;
+				$posts = $term->post()->where('id','<>',$data['post']->id)->limit(6)->get();
+			@endphp
+			@if(count($posts))
 			<div class="post-related">
 				<h3>Xem thêm</h3>
-				@php  
-					$term = $data['post']->term;
-					$posts = $term->post()->where('id','<>',$data['post']->id)->limit(6)->get();
-				@endphp
 				<div class="flex justify-content-between flex2">
 					<div class="flex2col1">
 						<ul>
@@ -70,6 +96,7 @@
 					</div>
 				</div>
 			</div>
+			@endif
 		</div>
 	</div>
 </main>

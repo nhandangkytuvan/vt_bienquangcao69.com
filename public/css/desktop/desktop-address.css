@@ -1,0 +1,33 @@
+.address{
+	background-color: #fff;
+	padding:30px;
+}
+.address .flex1 >div{
+	width: 24%;
+} 
+.address .flex1col2 p{
+	color: rgb(0,0,255);
+	margin-top: 10px;
+	font-weight: bold;
+}
+.address .flex1col3 p{
+	color: rgb(255,0,255);
+	margin-top: 10px;
+	font-weight: bold;
+}
+.address .flex1col4 p{
+	color: #15c;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.address h1{
+	color: red;
+	font-size: 18px;
+}
+.address h2{
+	margin-top: 20px;
+}
+.address >h3{
+	margin-top: 30px;
+	text-align: center;
+}
