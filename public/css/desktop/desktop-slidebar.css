@@ -1,0 +1,16 @@
+/**/
+.slidebar .post{
+	margin-bottom: 25px;
+}
+.slidebar .post h3{
+	font-size: 13px;
+}
+.slidebar .post h3.post-avatar{
+	margin-top: 5px;
+}
+.slidebar .post h4.post-price{
+	margin-top: 5px;
+	color: #f05c61;
+	font-size: 12px;
+}
+/**/
