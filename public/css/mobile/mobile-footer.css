@@ -1,5 +1,9 @@
 footer{
-	margin-top: 20px;
+	padding-top: 20px;
+	/*border-top: 1px solid #d8d5d5;*/
+}
+footer menu{
+	margin-bottom: 20px;
 }
 footer .flex1col1{
 	width: 30%;

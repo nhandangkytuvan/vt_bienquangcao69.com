@@ -34,25 +34,46 @@
 		<div class="container">
 			<div class="flex flex1 justify-content-between">
 				<div class="flex1col1 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href=""><i class="fa fa-home"></i></a></h3>
+					<h3 class="text-center"><a href="{{ url('/') }}"><i class="fa fa-home"></i></a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href="">Giới thiệu</a></h3>
+					<h3 class="text-center"><a href="{{ url('about') }}">Giới thiệu</a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href="" class="menu-sp_open">Sản phẩm</a></h3>
+					<h3 class="text-center"><a href="{{ MyAPI::getUrlTerm(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href="" class="menu-item_open">Danh mục</a></h3>
+					<h3 class="text-center"><a href="#" class="menu-item_open">Danh mục</a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href="" class="menu-tuvan_open">Tư vấn</a></h3>
+					<h3 class="text-center"><a href="#" class="menu-tuvan_open">Tư vấn</a></h3>
 				</div>
 			</div>
 		</div>
 	</menu>
 	@yield('content')	
 	<footer>
+		<menu>
+			<div class="container">
+				<div class="flex flex1 justify-content-between">
+					<div class="flex1col1 flex align-items-center justify-content-center">
+						<h3 class="text-center"><a href="{{ url('/') }}"><i class="fa fa-home"></i></a></h3>
+					</div>
+					<div class="flex1col2 flex align-items-center justify-content-center">
+						<h3 class="text-center"><a href="{{ url('about') }}">Giới thiệu</a></h3>
+					</div>
+					<div class="flex1col2 flex align-items-center justify-content-center">
+						<h3 class="text-center"><a href="{{ MyAPI::getUrlTerm(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
+					</div>
+					<div class="flex1col2 flex align-items-center justify-content-center">
+						<h3 class="text-center"><a href="#" class="menu-item_open">Danh mục</a></h3>
+					</div>
+					<div class="flex1col2 flex align-items-center justify-content-center">
+						<h3 class="text-center"><a href="#" class="menu-tuvan_open">Tư vấn</a></h3>
+					</div>
+				</div>
+			</div>
+		</menu>
 		<div class="container">
 			<div class="flex flex1 justify-content-between">
 				<div class="flex1col1 flex justify-content-center align-items-center">
@@ -90,23 +111,23 @@
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="">Công trình mới</a>
+						<a href="{{ MyAPI::getUrlTerm(13) }}">Công trình mới</a>
 					</h4>
 				</li>
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="">Tin tức - Sự kiện</a>
+						<a href="{{ MyAPI::getUrlTerm(12) }}">Tin tức - Sự kiện</a>
 					</h4>
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="">Tuyển dụng</a>
+						<a href="{{ MyAPI::getUrlTerm(14) }}">Tuyển dụng</a>
 					</h4>
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="">Liên hệ</a>
+						<a href="{{ url('address') }}">Liên hệ</a>
 					</h4>
 				</li>
 			</ul>

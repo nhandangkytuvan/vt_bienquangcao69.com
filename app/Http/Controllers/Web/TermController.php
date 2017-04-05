@@ -43,17 +43,17 @@ class TermController extends Controller{
             }
         }else{
             switch ($term_id) {
-                case 33:
-                    return view('web.mobile.term',['data'=>$data]);
+                case 12:
+                    return view('web.mobile.new',['data'=>$data]);
                     break;
-                case 32:
-                    return view('web.mobile.kythuat',['data'=>$data]);
+                case 13:
+                    return view('web.mobile.new',['data'=>$data]);
                     break;
-                case 34:
-                    return view('web.mobile.hoiphuc',['data'=>$data]); 
+                case 14:
+                    return view('web.mobile.new',['data'=>$data]); 
                     break;
                 default:
-                    return view('web.mobile.term',['data'=>$data]);  
+                    return view('web.mobile.product',['data'=>$data]);  
                     break;
             }
         }
