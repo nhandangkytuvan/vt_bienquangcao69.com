@@ -8,11 +8,7 @@
 <meta id="metaKeywords" name="keywords" content="">
 @endsection('keyword')
 @section('css')
-<link rel="stylesheet" href="{{ asset('public/css/mobile/mobile-term.css') }}">
 <link rel="stylesheet" href="{{ asset('public/css/mobile/mobile-address.css') }}">
 @endsection('css')
 @section('content')
-	<div class="container">
-		
-	</div>
 @endsection('content')

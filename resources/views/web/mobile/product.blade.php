@@ -14,39 +14,42 @@
 @section('content')
 	<main class="container product">
 		<h3>{{ $data['term']->term_name }}</h3>
+		@php
+			$posts = $data['term']->post()->paginate(9);
+		@endphp
 		<div class="posts-sp">
+			@if($posts[0])
 			<div class="post-top">
-				<h3 class="post-avatar"><a href="#"><img src="{{ asset('public/images/mobile/home-1.png') }}" class="img-responsive center-block"></a></h3>
-				<h3 class="post-name"><a href="">SP-Biển quảng cáo cửa hiệu</a></h3>
-				<p class="text-justify post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo laborum libero rem hic, sint, rerum facilis qui ad maiores ab quia autem.</p>
+				<h3 class="post-avatar">
+					<a href="{{ MyAPI::getUrlPost($posts[0]->id) }}">
+						<img src="{{ asset('public/img/'.$posts[0]->post_avatar) }}" class="img-responsive center-block">
+					</a>
+				</h3>
+				<h3 class="post-name"><a href="{{ MyAPI::getUrlPost($posts[0]->id) }}">{{ $posts[0]->post_name }}</a></h3>
+				<p class="text-justify post-description">
+					{{ MyAPI::limitWord($posts[0]->post_description,30) }}...
+				</p>
 			</div>
+			@php unset($posts[0]) @endphp
+			@endif
 			<div class="post-middle">
 				<div class="flex flex1 flex-wrap-wrap justify-content-around">
+					@foreach($posts as $post)
 					<div class="flex1col1">
-						<h3><a href="#"><img src="{{ asset('public/images/mobile/sp-1.png') }}" class="center-block img-responsive"></a></h3>
-						<h4><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4>
+						<h3>
+							<a href="{{ MyAPI::getUrlPost($post->id) }}">
+								<img src="{{ asset('public/img/'.$post->id) }}" class="center-block img-responsive">
+							</a>
+						</h3>
+						<h4>
+							<a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a>
+						</h4>
 					</div>
-					<div class="flex1col1">
-						<h3><a href="#"><img src="{{ asset('public/images/mobile/sp-2.png') }}" class="center-block img-responsive"></a></h3>
-						<h4><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4>
-					</div>
-					<div class="flex1col1">
-						<h3><a href="#"><img src="{{ asset('public/images/mobile/sp-3.png') }}" class="center-block img-responsive"></a></h3>
-						<h4><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4>
-					</div>
-					<div class="flex1col1">
-						<h3><a href="#"><img src="{{ asset('public/images/mobile/sp-4.png') }}" class="center-block img-responsive"></a></h3>
-						<h4><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4>
-					</div>
-					<div class="flex1col1">
-						<h3><a href="#"><img src="{{ asset('public/images/mobile/sp-5.png') }}" class="center-block img-responsive"></a></h3>
-						<h4><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4>
-					</div>
-					<div class="flex1col1">
-						<h3><a href="#"><img src="{{ asset('public/images/mobile/sp-6.png') }}" class="center-block img-responsive"></a></h3>
-						<h4><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4>
-					</div>
+					@endforeach
 				</div>
+			</div>
+			<div class="my_pagination">
+				{{ $posts->links() }}
 			</div>
 		</div>
 	</main>

@@ -37,7 +37,7 @@
 					<h3 class="text-center"><a href="{{ url('/') }}"><i class="fa fa-home"></i></a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href="{{ url('about') }}">Giới thiệu</a></h3>
+					<h3 class="text-center"><a href="{{ MyAPI::getUrlPost(11) }}">Giới thiệu</a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
 					<h3 class="text-center"><a href="{{ MyAPI::getUrlTerm(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
@@ -60,7 +60,7 @@
 						<h3 class="text-center"><a href="{{ url('/') }}"><i class="fa fa-home"></i></a></h3>
 					</div>
 					<div class="flex1col2 flex align-items-center justify-content-center">
-						<h3 class="text-center"><a href="{{ url('about') }}">Giới thiệu</a></h3>
+						<h3 class="text-center"><a href="{{ MyAPI::getUrlPost(11) }}">Giới thiệu</a></h3>
 					</div>
 					<div class="flex1col2 flex align-items-center justify-content-center">
 						<h3 class="text-center"><a href="{{ MyAPI::getUrlTerm(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
@@ -127,7 +127,7 @@
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="{{ url('address') }}">Liên hệ</a>
+						<a href="{{ MyAPI::getUrlPost(12) }}">Liên hệ</a>
 					</h4>
 				</li>
 			</ul>

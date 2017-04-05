@@ -11,10 +11,9 @@
 <link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-address.css') }}">
 @endsection('css')
 @section('js')
-<script type="text/javascript" src="{{ asset('public/js/global/MSClass.js') }}"></script>
 @endsection('js')
 @section('content')
-	<main class="container address">
+	<!-- <main class="container address">
 		<div class="flex flex1 justify-content-between">
 			<div class="flex1col1">
 				<h1 class="text-center text-uppercase">Quảng cáo 69</h1>
@@ -44,5 +43,5 @@
 			</div>
 		</div>
 		<h3>" Sự hài lòng của bạn là niềm hạnh phúc của chúng tôi "</h3>
-	</main>
+	</main> -->
 @endsection('content')

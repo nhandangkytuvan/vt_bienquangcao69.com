@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-about.css') }}">
 @endsection('css')
 @section('content')
-	<main class="about container">
+<!-- 	<main class="about container">
 		<div class="flex justify-content-between">
 			<div class="flex1col1">
 				@include('web.desktop.slidebar')
@@ -62,5 +62,5 @@
 				</div>
 			</div>
 		</div>
-	</main>
+	</main> -->
 @endsection('content')

@@ -1,0 +1,48 @@
+.post .crub{
+	background-color: #d8d5d5;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 15px;
+	padding-left: 10px;
+}
+.post .post-view{
+	padding:15px;
+}
+.post h1{
+	font-size: 18px;
+	color: #228f0f;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #686a15;
+}
+.post .post-description{
+	margin-top: 10px;
+	font-weight: bold;
+}
+/**/
+.post .post-footer h3{
+	display: inline-block;
+    padding: 0px 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #228f0f;
+    border: 1px solid #686a15;
+    font-weight: normal;
+    font-size: 14px;
+}
+.post .post-footer ul{
+	list-style: none;
+}
+.post .post-footer ul h4{
+	color: #228f0f;
+	margin-top: 10px;
+	font-size: 13px;
+	position: relative;
+	padding-left: 15px;
+}
+.post .post-footer ul h4 i{
+	position: absolute;
+	left: 0px;
+	color: red;
+	font-size: 10px;
+}

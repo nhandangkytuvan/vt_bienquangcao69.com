@@ -13,108 +13,34 @@
 @endsection('css')
 @section('content')
 	<main class="container new">
-		<div class="crub">
-			<div class="flex">
-				<div class="col1 flex justify-content-center align-items-center">
-					<h5><a href="{{ url('/') }}">Trang chủ <i class="fa fa-angle-right"></i> tìm kiếm - {{ Request::input('keyword') }}</a></h5>
-				</div>
-			</div>
-		</div>
 		<h3>{{ $data['term']->term_name }}</h3>
 		<div class="posts-new">
+			@php
+				$posts = $data['term']->post()->paginate(8);
+			@endphp
+			@foreach($posts as $post)
 			<div class="post-top">
 				<div class="flex flex1 justify-content-between">
 					<div class="flex1col1 flex justify-content-between align-items-center">
 						<div>
 							<h3 class="post-avatar">
-								<a href="#">
-									<img src="{{ asset('public/images/mobile/new-1.jpg') }}" class="center-block img-responsive">
+								<a href="{{ MyAPI::getUrlPost($post->id) }}">
+									<img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive">
 								</a>
 							</h3>
 						</div>
 					</div>
 					<div class="flex1col2 flex justify-content-between align-items-center">
 						<div>
-							<h3 class="post-name"><a href="#">Làm biển quảng cáo tăng ưu thế cạnh tranh</a></h3>
+							<h3 class="post-name"><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
 							<p class="post-description">
-								Bạn cũng nên dành nhiều thời gian để đưa ra cách thiết kế nội thất cửa hàng sao cho phù hợp với ...
+								{{ MyAPI::limitWord($post->post_description,30) }}...
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="post-top">
-				<div class="flex flex1 justify-content-between">
-					<div class="flex1col1 flex justify-content-between align-items-center">
-						<div>
-							<h3 class="post-avatar">
-								<a href="#">
-									<img src="{{ asset('public/images/mobile/new-1.jpg') }}" class="center-block img-responsive">
-								</a>
-							</h3>
-						</div>
-					</div>
-					<div class="flex1col2 flex justify-content-between align-items-center">
-						<div>
-							<h3 class="post-name"><a href="#">Làm biển quảng cáo tăng ưu thế cạnh tranh</a></h3>
-							<p class="post-description">
-								Bạn cũng nên dành nhiều thời gian để đưa ra cách thiết kế nội thất cửa hàng sao cho phù hợp với ...
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="post-top">
-				<div class="flex flex1 justify-content-between">
-					<div class="flex1col1 flex justify-content-between align-items-center">
-						<div>
-							<h3 class="post-avatar">
-								<a href="#">
-									<img src="{{ asset('public/images/mobile/new-1.jpg') }}" class="center-block img-responsive">
-								</a>
-							</h3>
-						</div>
-					</div>
-					<div class="flex1col2 flex justify-content-between align-items-center">
-						<div>
-							<h3 class="post-name"><a href="#">Làm biển quảng cáo tăng ưu thế cạnh tranh</a></h3>
-							<p class="post-description">
-								Bạn cũng nên dành nhiều thời gian để đưa ra cách thiết kế nội thất cửa hàng sao cho phù hợp với ...
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="post-top">
-				<div class="flex flex1 justify-content-between">
-					<div class="flex1col1 flex justify-content-between align-items-center">
-						<div>
-							<h3 class="post-avatar">
-								<a href="#">
-									<img src="{{ asset('public/images/mobile/new-1.jpg') }}" class="center-block img-responsive">
-								</a>
-							</h3>
-						</div>
-					</div>
-					<div class="flex1col2 flex justify-content-between align-items-center">
-						<div>
-							<h3 class="post-name"><a href="#">Làm biển quảng cáo tăng ưu thế cạnh tranh</a></h3>
-							<p class="post-description">
-								Bạn cũng nên dành nhiều thời gian để đưa ra cách thiết kế nội thất cửa hàng sao cho phù hợp với ...
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="post-middle">
-				<ul>
-					<li><h4><i class="fa fa-angle-double-right"></i><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4></li>
-					<li><h4><i class="fa fa-angle-double-right"></i><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4></li>
-					<li><h4><i class="fa fa-angle-double-right"></i><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4></li>
-					<li><h4><i class="fa fa-angle-double-right"></i><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4></li>
-					<li><h4><i class="fa fa-angle-double-right"></i><a href="">Lorem ipsum dolor sit amet, consectetur.</a></h4></li>
-				</ul>
-			</div> -->
+			@endforeach
 		</div>
 	</main>
 @endsection('content')

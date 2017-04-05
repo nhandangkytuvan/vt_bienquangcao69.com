@@ -36,7 +36,7 @@
 						<div><h3><a href="{{ url('/') }}" class="flex align-items-center justify-content-center">Trang chủ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="{{ url('about') }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlPost(11) }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center menu-items">
 						<div class="pos-relative">
@@ -55,7 +55,7 @@
 						<div><h3><a href="{{ MyAPI::getUrlTerm(13) }}" class="flex align-items-center justify-content-center">Công trình mới</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="{{ url('address') }}" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlPost(12) }}" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
 						<div><h3><a href="{{ MyAPI::getUrlTerm(14) }}" class="flex align-items-center justify-content-center">Tuyển dụng</a></h3>
