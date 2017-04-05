@@ -27,20 +27,130 @@
 <body>
 	<header>
 		<div class="container">
-			
+			<h2><img src="{{ asset('public/images/mobile/header-1.png') }}" class="img-responsive center-block"></h2>
 		</div>
 	</header>
-	<div class="banner container">
-		<div class="slick-home">
-			
+	<menu>
+		<div class="container">
+			<div class="flex flex1 justify-content-between">
+				<div class="flex1col1 flex align-items-center justify-content-center">
+					<h3 class="text-center"><a href=""><i class="fa fa-home"></i></a></h3>
+				</div>
+				<div class="flex1col2 flex align-items-center justify-content-center">
+					<h3 class="text-center"><a href="">Giới thiệu</a></h3>
+				</div>
+				<div class="flex1col2 flex align-items-center justify-content-center">
+					<h3 class="text-center"><a href="" class="menu-sp_open">Sản phẩm</a></h3>
+				</div>
+				<div class="flex1col2 flex align-items-center justify-content-center">
+					<h3 class="text-center"><a href="" class="menu-item_open">Danh mục</a></h3>
+				</div>
+				<div class="flex1col2 flex align-items-center justify-content-center">
+					<h3 class="text-center"><a href="" class="menu-tuvan_open">Tư vấn</a></h3>
+				</div>
+			</div>
 		</div>
-	</div>
+	</menu>
 	@yield('content')	
 	<footer>
 		<div class="container">
-			
-		</div>
-		@yield('toolbar')	
+			<div class="flex flex1 justify-content-between">
+				<div class="flex1col1 flex justify-content-center align-items-center">
+					<h2><a href="#"><img src="{{ asset('public/images/mobile/footer-1.png') }}" class="center-block img-responsive"></a></h2>
+				</div>
+				<div class="flex1col2 flex justify-content-center align-items-center">
+					<div>
+						<h2 class="text-uppercase">DOANH NGHIỆP TRUYỀN THÔNG VÀ ĐẦU TƯ </h2>
+						<h2 class="text-uppercase">QUẢNG CÁO 69</h2>
+						<h5>Điện thoại hỗ trợ: 09 232 99998 - 09 112 88886 </h5>
+						<h5>Email hỗ trợ: bienquangcao69@gmail.com</h5>
+						<h5>Trụ sở: 336 đường bưởi  </h5>
+						<h5>Xưởng SX: 70/122 Tây Mỗ - Từ Liêm - Hà Nội</h5>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="footer-status"></div>
 	</footer>
+	<div id="menu-sp" class="mypopup-menu">
+		<h3 class="text-center title1">Danh mục</h3>
+		<div>
+			<ul>
+				@php $product_childs = $product->children @endphp
+				@foreach($product_childs as $product_child)
+				<li><h4><i class="fa fa-angle-double-right"></i> <a href="{{ MyAPI::getUrlTerm($product_child->id) }}">{{ $product_child->term_name }}</a></h4></li>
+				@endforeach
+			</ul>
+		</div>
+	</div>
+	<div id="menu-item" class="mypopup-menu">
+		<h3 class="text-center title1">Danh mục</h3>
+		<div>
+			<ul>
+				<li>
+					<h4>
+						<i class="fa fa-angle-double-right"></i> 
+						<a href="">Công trình mới</a>
+					</h4>
+				</li>
+				<li>
+					<h4>
+						<i class="fa fa-angle-double-right"></i> 
+						<a href="">Tin tức - Sự kiện</a>
+					</h4>
+				<li>
+					<h4>
+						<i class="fa fa-angle-double-right"></i> 
+						<a href="">Tuyển dụng</a>
+					</h4>
+				<li>
+					<h4>
+						<i class="fa fa-angle-double-right"></i> 
+						<a href="">Liên hệ</a>
+					</h4>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="menu-tuvan">
+		<h3 class="text-center title1">Tư vấn - hỗ trợ</h3>
+		<div class="phone">
+			<div class="flex flex1 justify-content-between">
+				<div class="flex1col1 flex justify-content-center align-items-center">
+					<h3><a href="tel:09 232 99998"><i></i></a></h3>
+				</div>
+				<div class="flex1col2 flex align-items-center justify-content-center">
+					<div>
+						<h3><a href="tel:09 232 99998">09 232 99998</a></h3>
+						<h3><a href="tel:09 112 88886">09 112 88886</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="email">
+			<div class="flex flex1 justify-content-between">
+				<div class="flex1col1 flex justify-content-center align-items-center">
+					<h3><a href="mailto:bienquangcao69@gmail.com"><i></i></a></h3>
+				</div>
+				<div class="flex1col2 flex align-items-center justify-content-center">
+					<div>
+						<h3><a href="mailto:bienquangcao69@gmail.com">bienquangcao69<br>@gmail.com</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="skype">
+			<div class="flex flex1 justify-content-between">
+				<div class="flex1col1 flex justify-content-center align-items-center">
+					<h3><a href="skype:bienquangcao69"><i></i></a></h3>
+				</div>
+				<div class="flex1col2 flex align-items-center justify-content-center">
+					<div>
+						<h3><a href="skype:bienquangcao69">bienquangcao69</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
