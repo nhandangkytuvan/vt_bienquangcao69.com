@@ -10,6 +10,6 @@ class Comment extends Model{
     	return $this->belongsTo('App\Comment','comment_id','id');
     }
     public function children(){
-    	return $this->belongsTo('App\Comment','comment_id','id');
+    	return $this->hasMany('App\Comment','comment_id','id');
     }
 }

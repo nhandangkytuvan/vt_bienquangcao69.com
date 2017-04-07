@@ -93,6 +93,7 @@
     height: 34px;
     line-height: 34px;
     padding:0px 10px;
+    border:1px solid #686a15;
 }
 .posts .post-comments .tabs-button-1 >div.active{
     color: #fff;
@@ -169,4 +170,8 @@
     border-bottom-color: #f1f1f1;
     border-width: 6px;
     margin-left: -6px;
+}
+/**/
+.posts .post-comments .lists-facebook{
+    margin-top: 5px;
 }

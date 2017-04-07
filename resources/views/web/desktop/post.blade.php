@@ -110,12 +110,15 @@
 										<h5 class="comment-name">Khách</h5>
 										<p class="comment-detail">{!! $comment->comment_detail !!}</p>
 									</div>
+									@php 
+										$comment_reply = $comment->children()->first();
+									@endphp
+									@if($comment_reply)
 									<div class="ans-question arrow_box">
 										<h5 class="comment-name">quangcao69</h5>
-										<p class="comment-detail">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem tenetur repellendus! Delectus recusandae, qui sequi.
-										</p>
+										<p class="comment-detail">{{ $comment_reply->comment_detail }}</p>
 									</div>
+									@endif
 								</li>
 								@endforeach
 							</ul>
@@ -123,7 +126,7 @@
 						@endif
 					</div>
 					<div>
-						<div>
+						<div class="lists-facebook">
 							<!-- Load Facebook SDK for JavaScript -->
 							<div id="fb-root"></div>
 							<script>(function(d, s, id) {
