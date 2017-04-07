@@ -40,6 +40,7 @@ Route::group(['middleware' => ['check-user']], function () {
 	Route::any('user/comment/index{query?}','User\CommentController@index');
 	Route::any('user/comment/reply/{comment_id}','User\CommentController@reply');
 	Route::any('user/comment/delete/{comment_id}','User\CommentController@delete');
+	Route::any('user/comment/active/{comment_id}','User\CommentController@active');
 	// media
 	Route::any('user/media/create','User\MediaController@create');
 	Route::any('user/media/edit/{media_id?}','User\MediaController@edit');

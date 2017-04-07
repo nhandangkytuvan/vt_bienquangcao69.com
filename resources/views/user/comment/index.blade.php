@@ -19,7 +19,7 @@
         </tr>
         @foreach($data['comments'] as $key => $comment)
         @php $post = $comment->post; @endphp
-        <tr>
+        <tr {!! $comment->comment_is_new==1 ? 'class="bg-success"' : '' !!}>
             <td>{{ $comment->id }}</td>
             <td><a href="{{ url($post->post_alias.'/'.$post->id.'.htm') }}">{{ $post->post_name }}</a></td>
             <td>{!! $comment->comment_detail !!}</td>
@@ -38,6 +38,11 @@
                                 <span class="glyphicon glyphicon-option-horizontal"></span>
                             </a>
                             <ul class="dropdown-menu" style="border-radius: 0;right: 0;left: auto;">
+                                <li>
+                                    <a href="{{ url('user/comment/active/'.$comment->id) }}">
+                                        <span class="glyphicon glyphicon-check"></span> Kích hoạt comment
+                                    </a> 
+                                </li> 
                                 <li>
                                     <a href="{{ url('user/comment/reply/'.$comment->id) }}">
                                         <span class="glyphicon glyphicon-share-alt"></span> Reply comment

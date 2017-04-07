@@ -91,7 +91,7 @@
 						<div class="send-question">
 							<form action="{{ url('web/comment/create/'.$data['post']->id) }}">
 								<div class="text-question">
-									<textarea name="comment_detail" placeholder="Bạn cần hỏi gì..."></textarea>
+									<textarea name="comment_detail" placeholder="Bạn cần hỏi gì..." required></textarea>
 								</div>
 								<div class="button-submit">
 									<button type="submit">Gửi câu hỏi</button>
@@ -99,7 +99,7 @@
 							</form>
 						</div>
 						@php 
-							$comments = $data['post']->comment()->limit(6)->get();
+							$comments = $data['post']->comment()->where('comment_status',1)->limit(6)->get();
 						@endphp
 						@if(count($comments))
 						<div class="lists-comment">
