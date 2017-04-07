@@ -81,7 +81,7 @@
 				</div>
 			</div>
 			@endif
-			<div class="post-comments">
+			<div class="post-comments" id="post-comments">
 				<div class="tabs-button-1">
 					<div class="comment-web active"><h4><i class="fa fa-question-circle"></i> Hỏi - Đáp</h4></div>
 					<div class="comment-facebook"><h4><i class="fa fa-facebook-official"></i> Facebook comment</h4></div>
@@ -89,15 +89,38 @@
 				<div class="tabs-content-1">
 					<div class="active">
 						<div class="send-question">
-							<form action="">
+							<form action="{{ url('web/comment/create/'.$data['post']->id) }}">
 								<div class="text-question">
-									<textarea name="" placeholder="Bạn cần hỏi gì..."></textarea>
+									<textarea name="comment_detail" placeholder="Bạn cần hỏi gì..."></textarea>
 								</div>
 								<div class="button-submit">
-									<button>Gửi câu hỏi</button>
+									<button type="submit">Gửi câu hỏi</button>
 								</div>
 							</form>
 						</div>
+						@php 
+							$comments = $data['post']->comment()->limit(6)->get();
+						@endphp
+						@if(count($comments))
+						<div class="lists-comment">
+							<ul>
+								@foreach($comments as $comment)
+								<li>
+									<div class="ask-question">
+										<h5 class="comment-name">Khách</h5>
+										<p class="comment-detail">{!! $comment->comment_detail !!}</p>
+									</div>
+									<div class="ans-question arrow_box">
+										<h5 class="comment-name">quangcao69</h5>
+										<p class="comment-detail">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quidem tenetur repellendus! Delectus recusandae, qui sequi.
+										</p>
+									</div>
+								</li>
+								@endforeach
+							</ul>
+						</div>
+						@endif
 					</div>
 					<div>
 						<div>
