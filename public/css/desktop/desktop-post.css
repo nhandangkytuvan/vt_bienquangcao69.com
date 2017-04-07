@@ -83,3 +83,52 @@
 .posts .flex1col2 .post-related ul li h5 a:hover{
     color: red;
 }
+/**/
+.posts .post-comments{
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.posts .post-comments .tabs-button-1 >div{
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    padding:0px 10px;
+}
+.posts .post-comments .tabs-button-1 >div.active{
+    color: #fff;
+    background-color: #228f0f;
+    border:1px solid #686a15;
+}
+.posts .post-comments .tabs-content-1 >div{
+    display: none;
+}
+.posts .post-comments .tabs-content-1 >div.active{
+    display: block;
+}
+/**/
+.posts .post-comments .send-question .text-question{
+    padding-top: 5px;
+}
+.posts .post-comments .send-question .text-question textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px 50px 10px 10px;
+    outline: none;
+    border: 1px solid #A3B1CF;
+    background: #FFF;
+    font-size: 14px;
+    color: #222;
+    line-height: 22px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+.posts .post-comments .send-question .button-submit button{
+    background: #4e69a2;
+    color: #FFF;
+    border-color: #435a8b #3c5488 #334c83;
+    border: 1px solid;
+    padding: 8px 20px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    border-radius: 3px;
+}

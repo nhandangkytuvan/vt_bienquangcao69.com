@@ -21,7 +21,7 @@
 		<div class="crub">
 			<div class="flex">
 				<div class="col1 flex justify-content-center align-items-center">
-					<h5><a href="{{ url('/') }}">Trang chủ <i class="fa fa-angle-right"></i> </a> <a href="{{ MyAPI::getUrlTerm($term->id) }}">{{ $term->term_name }}</a></h5>
+					<h5><a href="{{ url('/') }}">Trang chủ <i class="fa fa-angle-right"></i> </a> <a href="{{ MyAPI::getUrlTermObj($term) }}">{{ $term->term_name }}</a></h5>
 				</div>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 						<li>
 							<h4>
 								<i class="fa fa-angle-double-right"></i>
-								<a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a>
+								<a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a>
 							</h4>
 						</li>
 					@endforeach

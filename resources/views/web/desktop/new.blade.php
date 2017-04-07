@@ -28,10 +28,10 @@
 				<div class="post">
 					<div class="flex flex2 justify-content-between">
 						<div class="flex2col1">
-							<h3><a href="{{ MyAPI::getUrlPost($post->id) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
+							<h3><a href="{{ MyAPI::getUrlPostObj($post) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
 						</div>
 						<div class="flex2col2">
-							<h3><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
+							<h3><a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a></h3>
 							<p class="text-justify">
 								{{ $post->post_description }}
 							</p>

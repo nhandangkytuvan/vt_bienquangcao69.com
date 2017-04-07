@@ -21,13 +21,13 @@
 			@if($posts[0])
 			<div class="post-top">
 				<h3 class="post-avatar">
-					<a href="{{ MyAPI::getUrlPost($posts[0]->id) }}">
+					<a href="{{ MyAPI::getUrlPostObj($posts[0]) }}">
 						<img src="{{ asset('public/img/'.$posts[0]->post_avatar) }}" class="img-responsive center-block">
 					</a>
 				</h3>
-				<h3 class="post-name"><a href="{{ MyAPI::getUrlPost($posts[0]->id) }}">{{ $posts[0]->post_name }}</a></h3>
+				<h3 class="post-name"><a href="{{ MyAPI::getUrlPostObj($posts[0]) }}">{{ $posts[0]->post_name }}</a></h3>
 				<p class="text-justify post-description">
-					{{ MyAPI::limitWord($posts[0]->post_description,30) }}...
+					{{ MyAPI::getLimitWord($posts[0]->post_description,30) }}...
 				</p>
 			</div>
 			@php unset($posts[0]) @endphp
@@ -37,12 +37,12 @@
 					@foreach($posts as $post)
 					<div class="flex1col1">
 						<h3>
-							<a href="{{ MyAPI::getUrlPost($post->id) }}">
+							<a href="{{ MyAPI::getUrlPostObj($post) }}">
 								<img src="{{ asset('public/img/'.$post->id) }}" class="center-block img-responsive">
 							</a>
 						</h3>
 						<h4>
-							<a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a>
+							<a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a>
 						</h4>
 					</div>
 					@endforeach

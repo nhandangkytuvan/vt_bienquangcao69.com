@@ -41,22 +41,6 @@
 					<p>Xưởng SX: 70/68 Ngọc Thụy, Long Biên, Hà Nội</p>
 				</div>
 			</div>
-			<div>
-				<!-- Load Facebook SDK for JavaScript -->
-				<div id="fb-root"></div>
-				<script>(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));</script>
-
-				<!-- Your embedded comments code -->
-				<div class="fb-comment-embed"
-				   data-href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185"
-				   data-width="auto"></div>
-			</div>
 			@php  
 				$term = $data['post']->term;
 				$posts = $term->post()->where('id','<>',$data['post']->id)->limit(6)->get();
@@ -71,7 +55,7 @@
 							<li>
 								<h5>
 									<i class="fa fa-circle" aria-hidden="true"></i>
-									<a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a>
+									<a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a>
 								</h5>
 							</li>
 							@php 
@@ -87,7 +71,7 @@
 							<li>
 								<h5>
 									<i class="fa fa-circle" aria-hidden="true"></i>
-									<a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a>
+									<a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a>
 								</h5>
 							</li>
 							@php unset($posts[$key]) @endphp
@@ -97,6 +81,44 @@
 				</div>
 			</div>
 			@endif
+			<div class="post-comments">
+				<div class="tabs-button-1">
+					<div class="comment-web active"><h4><i class="fa fa-question-circle"></i> Hỏi - Đáp</h4></div>
+					<div class="comment-facebook"><h4><i class="fa fa-facebook-official"></i> Facebook comment</h4></div>
+				</div>
+				<div class="tabs-content-1">
+					<div class="active">
+						<div class="send-question">
+							<form action="">
+								<div class="text-question">
+									<textarea name="" placeholder="Bạn cần hỏi gì..."></textarea>
+								</div>
+								<div class="button-submit">
+									<button>Gửi câu hỏi</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div>
+						<div>
+							<!-- Load Facebook SDK for JavaScript -->
+							<div id="fb-root"></div>
+							<script>(function(d, s, id) {
+							  var js, fjs = d.getElementsByTagName(s)[0];
+							  if (d.getElementById(id)) return;
+							  js = d.createElement(s); js.id = id;
+							  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+							  fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));</script>
+
+							<!-- Your embedded comments code -->
+							<div class="fb-comment-embed"
+							   data-href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185"
+							   data-width="auto"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </main>

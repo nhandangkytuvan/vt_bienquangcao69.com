@@ -37,10 +37,10 @@
 					<h3 class="text-center"><a href="{{ url('/') }}"><i class="fa fa-home"></i></a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href="{{ MyAPI::getUrlPost(11) }}">Giới thiệu</a></h3>
+					<h3 class="text-center"><a href="{{ MyAPI::getUrlPostID(11) }}">Giới thiệu</a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
-					<h3 class="text-center"><a href="{{ MyAPI::getUrlTerm(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
+					<h3 class="text-center"><a href="{{ MyAPI::getUrlTermID(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
 				</div>
 				<div class="flex1col2 flex align-items-center justify-content-center">
 					<h3 class="text-center"><a href="#" class="menu-item_open">Danh mục</a></h3>
@@ -60,10 +60,10 @@
 						<h3 class="text-center"><a href="{{ url('/') }}"><i class="fa fa-home"></i></a></h3>
 					</div>
 					<div class="flex1col2 flex align-items-center justify-content-center">
-						<h3 class="text-center"><a href="{{ MyAPI::getUrlPost(11) }}">Giới thiệu</a></h3>
+						<h3 class="text-center"><a href="{{ MyAPI::getUrlPostID(11) }}">Giới thiệu</a></h3>
 					</div>
 					<div class="flex1col2 flex align-items-center justify-content-center">
-						<h3 class="text-center"><a href="{{ MyAPI::getUrlTerm(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
+						<h3 class="text-center"><a href="{{ MyAPI::getUrlTermID(1) }}" class="menu-sp_open">Sản phẩm</a></h3>
 					</div>
 					<div class="flex1col2 flex align-items-center justify-content-center">
 						<h3 class="text-center"><a href="#" class="menu-item_open">Danh mục</a></h3>
@@ -99,7 +99,7 @@
 			<ul>
 				@php $product_childs = $product->children @endphp
 				@foreach($product_childs as $product_child)
-				<li><h4><i class="fa fa-angle-double-right"></i> <a href="{{ MyAPI::getUrlTerm($product_child->id) }}">{{ $product_child->term_name }}</a></h4></li>
+				<li><h4><i class="fa fa-angle-double-right"></i> <a href="{{ MyAPI::getUrlTermID($product_child->id) }}">{{ $product_child->term_name }}</a></h4></li>
 				@endforeach
 			</ul>
 		</div>
@@ -111,23 +111,23 @@
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="{{ MyAPI::getUrlTerm(13) }}">Công trình mới</a>
+						<a href="{{ MyAPI::getUrlTermID(13) }}">Công trình mới</a>
 					</h4>
 				</li>
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="{{ MyAPI::getUrlTerm(12) }}">Tin tức - Sự kiện</a>
+						<a href="{{ MyAPI::getUrlTermID(12) }}">Tin tức - Sự kiện</a>
 					</h4>
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="{{ MyAPI::getUrlTerm(14) }}">Tuyển dụng</a>
+						<a href="{{ MyAPI::getUrlTermID(14) }}">Tuyển dụng</a>
 					</h4>
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="{{ MyAPI::getUrlPost(12) }}">Liên hệ</a>
+						<a href="{{ MyAPI::getUrlPostID(12) }}">Liên hệ</a>
 					</h4>
 				</li>
 			</ul>

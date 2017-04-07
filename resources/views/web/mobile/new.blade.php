@@ -24,7 +24,7 @@
 					<div class="flex1col1 flex justify-content-between align-items-center">
 						<div>
 							<h3 class="post-avatar">
-								<a href="{{ MyAPI::getUrlPost($post->id) }}">
+								<a href="{{ MyAPI::getUrlPostObj($post) }}">
 									<img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive">
 								</a>
 							</h3>
@@ -32,9 +32,9 @@
 					</div>
 					<div class="flex1col2 flex justify-content-between align-items-center">
 						<div>
-							<h3 class="post-name"><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
+							<h3 class="post-name"><a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a></h3>
 							<p class="post-description">
-								{{ MyAPI::limitWord($post->post_description,30) }}...
+								{{ MyAPI::getLimitWord($post->post_description,30) }}...
 							</p>
 						</div>
 					</div>

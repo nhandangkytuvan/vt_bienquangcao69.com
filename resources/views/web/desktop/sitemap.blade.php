@@ -2,14 +2,14 @@
 	@foreach($data['terms'] as $term)
 	<url>
 	<loc>
-	{{ MyAPI::getUrlTerm($term->id) }}
+	{{ MyAPI::getUrlTermObj($term) }}
 	</loc>
 	</url>
 	@endforeach
 	@foreach($data['posts'] as $post)
 	<url>
 	<loc>
-	{{ MyAPI::getUrlPost($post->id) }}
+	{{ MyAPI::getUrlPostObj($post) }}
 	</loc>
 	</url>
 	@endforeach

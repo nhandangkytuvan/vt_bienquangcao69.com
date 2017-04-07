@@ -17,8 +17,8 @@
 			<div class="flex flex1 flex-wrap-wrap">
 				@foreach($data['posts_sp'] as $post)
 				<div class="flex1col1">
-					<h3 class="text-uppercase post-name text-center"><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
-					<h3 class="post-avatar"><a href="{{ MyAPI::getUrlPost($post->id) }}" class="hvr-float-shadow"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
+					<h3 class="text-uppercase post-name text-center"><a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a></h3>
+					<h3 class="post-avatar"><a href="{{ MyAPI::getUrlPostObj($post) }}" class="hvr-float-shadow"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
 					<h4 class="text-center text-uppercase post-price">{{ number_format ($post->postSP->post_price,0,',','.') }} VNĐ</h4>
 				</div>
 				@endforeach
@@ -29,10 +29,10 @@
 			<div class="flex flex1 justify-content-between">
 				<div class="flex1col1">
 					@if($data['posts_new'][0])
-					<h3><a href="{{ MyAPI::getUrlPost($data['posts_new'][0]->id) }}"><img src="{{ asset('public/img/'.$data['posts_new'][0]->post_avatar) }}" class="center-block img-responsive"></a></h3>
-					<h3 class="text-uppercase"><a href="{{ MyAPI::getUrlPost($data['posts_new'][0]->id) }}">{{ $data['posts_new'][0]->post_name }}</a></h3>
+					<h3><a href="{{ MyAPI::getUrlPostObj($data['posts_new'][0]) }}"><img src="{{ asset('public/img/'.$data['posts_new'][0]->post_avatar) }}" class="center-block img-responsive"></a></h3>
+					<h3 class="text-uppercase"><a href="{{ MyAPI::getUrlPostObj($data['posts_new'][0]) }}">{{ $data['posts_new'][0]->post_name }}</a></h3>
 					<p class="text-justify">
-						{{ MyAPI::limitWord($data['posts_new'][0]->post_description,40) }}...
+						{{ MyAPI::getLimitWord($data['posts_new'][0]->post_description,40) }}...
 					</p>
 					@php unset($data['posts_new'][0]); @endphp
 					@endif
@@ -40,9 +40,9 @@
 				<div class="flex1col2">
 					@foreach($data['posts_new'] as $post)
 					<div>
-						<h3><i class="fa fa-angle-double-right"></i><a href="{{ MyAPI::getUrlPost($post->id) }}">{{ $post->post_name }}</a></h3>
+						<h3><i class="fa fa-angle-double-right"></i><a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a></h3>
 						<p>
-							{{ MyAPI::limitWord($post->post_description,20) }}...
+							{{ MyAPI::getLimitWord($post->post_description,20) }}...
 						</p>
 					</div>
 					@endforeach
