@@ -4,7 +4,7 @@
 @endsection('menu')
 @section('content')
 <div style="margin-bottom: 10px;">
-    <form action="{{ url('user/term/index') }}" class="form-inline">
+    <form class="form-inline">
         <div class="form-group">
             <select name="term_id" class="form-control">
                 <option value="0">Chọn danh mục</option>
@@ -42,8 +42,6 @@
             <td>ID</td>
             <td>Ảnh</td>
             <td>Tên</td>
-            <!-- <td>Des</td> -->
-            <!-- <td>Meta</td> -->
             <td>Số bài</td>
             <td>L.xem</td>
             <td>#</td>
@@ -58,8 +56,6 @@
                 @endif
             </td>
             <td><a href="{{ MyAPI::getUrlTermObj($term) }}">{{ $term->term_name }}</a></td>
-            <!-- <td>{{ $term->term_description }}</td> -->
-            <!-- <td>{{ $term->term_meta }}</td> -->
             <td></td>
             <td></td>
             <td>
@@ -101,10 +97,8 @@
                 @endif
             </td>
             <td><a href="{{ MyAPI::getUrlTermObj($term_child) }}">{{ $term_child->term_name }}</a></td>
-            <!-- <td>{{ $term->term_description }}</td> -->
-            <!-- <td>{{ $term->term_meta }}</td> -->
             <td>{{ $term_child->post()->count() }}</td>
-            <td>{{ $term_child->visit()->count() }}</td>
+            <td>{{ $term_child->visit ? $term_child->visit->visit_sum : '' }}</td>
             <td>
                 <div class="clearfix">
                     <div class="pull-right">
@@ -151,10 +145,8 @@
                 @endif
             </td>
             <td><a href="{{ MyAPI::getUrlTermObj($term) }}">{{ $term->term_name }}</a></td>
-            <!-- <td>{{ $term->term_description }}</td> -->
-            <!-- <td>{{ $term->term_meta }}</td> -->
             <td>{{ $term->post()->count() }}</td>
-            <td>{{ $term->visit()->count() }}</td>
+            <td>{{ $term->visit ? $term->visit->visit_sum : '' }}</td>
             <td>
                 <div class="clearfix">
                     <div class="pull-right">

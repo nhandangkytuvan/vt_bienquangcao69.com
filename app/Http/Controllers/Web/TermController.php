@@ -26,6 +26,9 @@ class TermController extends Controller{
                 case 14:
                     return view('web.desktop.new',['data'=>$data]); 
                     break;
+                case 15:
+                    return view('web.desktop.new',['data'=>$data]); 
+                    break;
                 default:
                     return view('web.desktop.product',['data'=>$data]); 
                     break;
@@ -39,6 +42,9 @@ class TermController extends Controller{
                     return view('web.mobile.new',['data'=>$data]);
                     break;
                 case 14:
+                    return view('web.mobile.new',['data'=>$data]); 
+                    break;
+                case 15:
                     return view('web.mobile.new',['data'=>$data]); 
                     break;
                 default:
