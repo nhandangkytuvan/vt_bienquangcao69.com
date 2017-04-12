@@ -3,7 +3,6 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
-use App\Setting;
 use Session;
 use Hash;
 class UserController extends Controller{
@@ -16,7 +15,6 @@ class UserController extends Controller{
         'password' => 'required|min:6',
     ];
 	public function login(Request $request){
-		$setting = Setting::first();
 		if(Session::get('user')){
 			return redirect('user/post/index');
 		}
@@ -37,8 +35,7 @@ class UserController extends Controller{
 				return back();
 			}
 		}else{
-			$data['setting'] =$setting;
-			return view('web.user.login',['data'=>$data]);
+			return view('web.user.login');
 		}
 	}
 }

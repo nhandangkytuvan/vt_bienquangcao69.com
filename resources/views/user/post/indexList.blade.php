@@ -41,7 +41,7 @@
         </div>
         <div class="form-group">
             <div class='input-group'>
-                <input id="datetimepicker" type='text' class="form-control" placeholder="Ngày"/ style="width: 138px;" name="post_created" value="{{ Request::input('post_created') }}">
+                <input id="datetimepicker" type='text' class="form-control" placeholder="Ngày" style="width: 120px;" name="post_created" value="{{ Request::input('post_created') }}">
             </div>
         </div>
         <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>

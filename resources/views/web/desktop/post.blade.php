@@ -17,6 +17,24 @@
 <link rel="stylesheet" href="{{ asset('public/css/desktop/desktop-post.css') }}">
 @endsection('css')
 @section('js')
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1739360023022366',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 @endsection('js')
 @section('content')
 <main class="container posts">
@@ -127,20 +145,17 @@
 					</div>
 					<div>
 						<div class="lists-facebook">
-							<!-- Load Facebook SDK for JavaScript -->
 							<div id="fb-root"></div>
 							<script>(function(d, s, id) {
 							  var js, fjs = d.getElementsByTagName(s)[0];
 							  if (d.getElementById(id)) return;
 							  js = d.createElement(s); js.id = id;
-							  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+							  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=1739360023022366";
 							  fjs.parentNode.insertBefore(js, fjs);
 							}(document, 'script', 'facebook-jssdk'));</script>
 
 							<!-- Your embedded comments code -->
-							<div class="fb-comment-embed"
-							   data-href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185"
-							   data-width="auto"></div>
+							<div class="fb-comments" data-href="{{ MyAPI::getUrlPostObj($data['post']) }}" data-numposts="5" data-width="auto"></div>
 						</div>
 					</div>
 				</div>

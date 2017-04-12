@@ -42,25 +42,26 @@
             <td>ID</td>
             <td>Ảnh</td>
             <td>Tên</td>
-            <td>Des</td>
-            <td>Meta</td>
-            <td>Cấp trên</td>
+            <!-- <td>Des</td> -->
+            <!-- <td>Meta</td> -->
             <td>Số bài</td>
+            <td>L.xem</td>
             <td>#</td>
         </tr>
         @foreach($data['terms'] as $key => $term)
-        <tr>
+        @if($term->children()->exists())
+        <tr {!! $term->children()->exists() ? 'class="success"' : '' !!}>
             <td>{{ $term->id }}</td>
             <td>
                 @if($term->term_avatar)
                 <img src="{{ asset('public/img/'.$term->term_avatar) }}" class="img-responsive center-block" style="max-width: 50px;">
                 @endif
             </td>
-            <td><a href="{{ url($term->term_alias.'/'.$term->id) }}">{{ $term->term_name }}</a></td>
-            <td>{{ $term->term_description }}</td>
-            <td>{{ $term->term_meta }}</td>
-            <td>{{ $term->parent()->exists() ? $term->parent->term_name : '' }}</td>
-            <td>{{ $term->post()->count() }}</td>
+            <td><a href="{{ MyAPI::getUrlTermObj($term) }}">{{ $term->term_name }}</a></td>
+            <!-- <td>{{ $term->term_description }}</td> -->
+            <!-- <td>{{ $term->term_meta }}</td> -->
+            <td></td>
+            <td></td>
             <td>
                 <div class="clearfix">
                     <div class="pull-right">
@@ -70,7 +71,7 @@
                             </a>
                             <ul class="dropdown-menu" style="border-radius: 0;right: 0;left: auto;">
                                 <li>
-                                    <a href="{{ url($term->term_alias.'/'.$term->id) }}">
+                                    <a href="{{ MyAPI::getUrlTermObj($term) }}">
                                         <span class="glyphicon glyphicon-eye-open"></span> Xem term
                                     </a> 
                                 </li> 
@@ -90,6 +91,100 @@
                 </div> 
             </td>
         </tr>
+        @php $term_childrens = $term->children; @endphp
+        @foreach($term_childrens as $term_child)
+        <tr>
+            <td>{{ $term_child->id }}</td>
+            <td>
+                @if($term_child->term_avatar)
+                <img src="{{ asset('public/img/'.$term_child->term_avatar) }}" class="img-responsive center-block" style="max-width: 50px;">
+                @endif
+            </td>
+            <td><a href="{{ MyAPI::getUrlTermObj($term_child) }}">{{ $term_child->term_name }}</a></td>
+            <!-- <td>{{ $term->term_description }}</td> -->
+            <!-- <td>{{ $term->term_meta }}</td> -->
+            <td>{{ $term_child->post()->count() }}</td>
+            <td>{{ $term_child->visit()->count() }}</td>
+            <td>
+                <div class="clearfix">
+                    <div class="pull-right">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="javascript:;" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-option-horizontal"></span>
+                            </a>
+                            <ul class="dropdown-menu" style="border-radius: 0;right: 0;left: auto;">
+                                <li>
+                                    <a href="{{ MyAPI::getUrlTermObj($term_child) }}">
+                                        <span class="glyphicon glyphicon-eye-open"></span> Xem term
+                                    </a> 
+                                </li> 
+                                <li>
+                                    <a href="{{ url('user/term/edit/'.$term_child->id) }}">
+                                        <span class="glyphicon glyphicon-pencil"></span> Sửa term
+                                    </a> 
+                                </li> 
+                                <li>
+                                    <a href="{{ url('user/term/delete/'.$term_child->id) }}">
+                                        <span class="glyphicon glyphicon-trash"></span> Xóa term
+                                    </a> 
+                                </li>
+                            </ul>  
+                        </div>
+                    </div>
+                </div> 
+            </td>
+        </tr>
+        @endforeach
+        @php unset($data['terms'][$key]); @endphp
+        @endif
+        @endforeach
+        <tr class="active">
+            <td colspan="6"></td>
+        </tr>
+        @foreach($data['terms'] as $key => $term)
+        @if(!$term->children()->exists() && !$term->parent()->exists())
+        <tr class="info">
+            <td>{{ $term->id }}</td>
+            <td>
+                @if($term->term_avatar)
+                <img src="{{ asset('public/img/'.$term->term_avatar) }}" class="img-responsive center-block" style="max-width: 50px;">
+                @endif
+            </td>
+            <td><a href="{{ MyAPI::getUrlTermObj($term) }}">{{ $term->term_name }}</a></td>
+            <!-- <td>{{ $term->term_description }}</td> -->
+            <!-- <td>{{ $term->term_meta }}</td> -->
+            <td>{{ $term->post()->count() }}</td>
+            <td>{{ $term->visit()->count() }}</td>
+            <td>
+                <div class="clearfix">
+                    <div class="pull-right">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="javascript:;" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-option-horizontal"></span>
+                            </a>
+                            <ul class="dropdown-menu" style="border-radius: 0;right: 0;left: auto;">
+                                <li>
+                                    <a href="{{ MyAPI::getUrlTermObj($term) }}">
+                                        <span class="glyphicon glyphicon-eye-open"></span> Xem term
+                                    </a> 
+                                </li> 
+                                <li>
+                                    <a href="{{ url('user/term/edit/'.$term->id) }}">
+                                        <span class="glyphicon glyphicon-pencil"></span> Sửa term
+                                    </a> 
+                                </li> 
+                                <li>
+                                    <a href="{{ url('user/term/delete/'.$term->id) }}">
+                                        <span class="glyphicon glyphicon-trash"></span> Xóa term
+                                    </a> 
+                                </li>
+                            </ul>  
+                        </div>
+                    </div>
+                </div> 
+            </td>
+        </tr>
+        @endif
         @endforeach
     </table>
 </div>

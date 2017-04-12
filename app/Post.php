@@ -21,8 +21,8 @@ class Post extends Model{
     public function term(){
     	return $this->belongsTo('App\Term','term_id','id');
     }
-    public function view(){
-    	return $this->hasOne('App\View','post_id','id');
+    public function visit(){
+    	return $this->hasOne('App\Visit','post_id','id');
     }
     public function postSP(){
         return $this->hasOne('App\PostSP','post_id','id');

@@ -10,11 +10,9 @@ use Response;
 use BrowserDetect;
 class HomeController extends Controller{
 	public function show(Request $request){
-		$setting = Setting::first();
 		$data['request'] = $request;
 		$data['posts_sp'] = Post::where('post_group',1)->limit(12)->get();
 		$data['posts_new'] = Post::where('post_group',0)->limit(6)->get();
-		$data['setting'] = $setting;
 		if(BrowserDetect::isDesktop()){
 			return view('web.desktop.home',['data'=>$data]);
 		}else{
@@ -22,32 +20,26 @@ class HomeController extends Controller{
 		}
 	}
 	public function about(Request $request){
-		$setting = Setting::first();
-		$data['setting'] = $setting;
 		if(BrowserDetect::isDesktop()){
-			return view('web.desktop.about',['data'=>$data]);
+			return view('web.desktop.about');
 		}else{
-			return view('web.mobile.about',['data'=>$data]);
+			return view('web.mobile.about');
 		}
 	}
 	public function address(Request $request){
-		$setting = Setting::first();
-		$data['setting'] = $setting;
 		if(BrowserDetect::isDesktop()){
-			return view('web.desktop.address',['data'=>$data]);
+			return view('web.desktop.address');
 		}else{
-			return view('web.mobile.address',['data'=>$data]);
+			return view('web.mobile.address');
 		}
 	}
 	public function search(Request $request){
-		$setting = Setting::first();
-		$data['setting'] = $setting;
 		$posts = Post::where('post_name','like','%'.$request->input('keyword').'%')->where('post_status',1)->paginate(10);
 		$data['posts'] = $posts;
 		if(BrowserDetect::isDesktop()){
-			return view('web.desktop.search',['data'=>$data]);
+			return view('web.desktop.search');
 		}else{
-			return view('web.mobile.search',['data'=>$data]);
+			return view('web.mobile.search');
 		}
 	}
 	public function sitemap(Request $request){
