@@ -109,7 +109,6 @@
                             content_css: [
                                 '{{ asset("public/font/codepen.min.css") }}'
                             ],
-                            imagetools_cors_hosts: ['//http://localhost/cty_phongkhamnamkhang.net'],
                         });
                     });
                 </script>
