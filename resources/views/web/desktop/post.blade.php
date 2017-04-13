@@ -52,11 +52,11 @@
 			</div>
 			<div class="post-footer">
 				<div>
-					<h3>CÔNG TY TNHH TRUYỀN THÔNG VÀ ĐẦU TƯ MŨI TÊN VÀNG</h3>
-					<p>Điện thoại hỗ trợ: 091.787.5995/ 0462.948.759 - Fax: 04.6686 0351</p>
-					<p>Email hỗ trợ: sale@muitenvang.vn - dzung.tq@muitenvang.vn</p>
-					<p>Trụ sở: 17/435 Hồng Hà, Phúc Tân, Hoàn Kiếm, Hà Nội</p>
-					<p>Xưởng SX: 70/68 Ngọc Thụy, Long Biên, Hà Nội</p>
+					<h3>DOANH NGHIỆP TRUYỀN THÔNG VÀ ĐẦU TƯ QUẢNG CÁO 69</h3>
+					<p>Điện thoại hỗ trợ: <a href="tel:09 232 99998">09 232 99998</a> - <a href="tel:09 112 88886">09 112 88886</a> </p>
+					<p>Email hỗ trợ: <a href="mailto:bienquangcao69@gmail.com">bienquangcao69@gmail.com</a></p>
+					<p>Trụ sở: 336 đường bưởi  </p>
+					<p>Xưởng SX: 70/122 Tây Mỗ - Từ Liêm - Hà Nội</p>
 				</div>
 			</div>
 			@php  

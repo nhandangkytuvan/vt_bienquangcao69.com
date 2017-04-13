@@ -178,4 +178,15 @@
 /**/
 .posts .post-detail img{
     max-width: 100%;
+    display: block;
+    margin:10px auto;
+}
+.posts .post-footer p{
+    margin-bottom: 5px!important;
+}
+.posts .post-footer p a{
+    font-weight: bold;
+}
+.posts .post-footer p a:hover{
+    color: #228f0f;
 }
