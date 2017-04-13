@@ -1,6 +1,24 @@
 footer{
 	padding-top: 20px;
-	/*border-top: 1px solid #d8d5d5;*/
+}
+footer div.list-logo>h3{
+	display: inline-block;
+    padding: 0px 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #228f0f;
+    font-weight: normal;
+    font-size: 14px;
+}
+footer div.list-logo div.col1{
+	margin-bottom: 5px;
+	width: 25%;
+	padding:0px 5px;
+	margin-top: 10px;
+}
+footer div.list-logo{
+	margin-bottom: 10px;
 }
 footer menu{
 	margin-bottom: 20px;
@@ -17,7 +35,7 @@ footer .flex1col2 h2{
 }
 footer .flex1col2 h2:nth-child(2){
 	color: #228f0f;margin-bottom: 5px;font-size: 14px;
-}
+http://localhost/vt_bienquangcao69.com/public/images/mobile/logo-1.png}
 footer .flex1col2 h5{
 	margin-bottom: 5px;
 	font-size: 13px;

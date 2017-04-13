@@ -53,6 +53,35 @@
 	</menu>
 	@yield('content')	
 	<footer>
+		<div class="list-logo">
+			<h3>Khách hàng</h3>
+			<div class="flex flex-wrap-wrap justify-content-between">
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-1.png') }}" class="center-block img-responsive">
+				</div>
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-2.png') }}" class="center-block img-responsive">
+				</div>
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-3.png') }}" class="center-block img-responsive">
+				</div>
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-4.png') }}" class="center-block img-responsive">
+				</div>
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-5.png') }}" class="center-block img-responsive">
+				</div>
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-6.png') }}" class="center-block img-responsive">
+				</div>
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-7.png') }}" class="center-block img-responsive">
+				</div>
+				<div class="col1">
+					<img src="{{ asset('public/images/mobile/logo-8.png') }}" class="center-block img-responsive">
+				</div>
+			</div>
+		</div>
 		<menu>
 			<div class="container">
 				<div class="flex flex1 justify-content-between">
