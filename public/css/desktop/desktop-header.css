@@ -123,7 +123,6 @@ header .danhmuc .flex1 .flex1col2 >div.search div.col3 button{
 }
 header .danhmuc .flex1 .flex1col2 >div.myslide{
 	margin-top: 20px;
-	padding-bottom: 10px;
 }
 /**/
 header .danhmuc .flex1 .flex1col3{
@@ -168,3 +167,36 @@ header .danhmuc .flex1 .flex1col3 .flex2col2 h3{
 header .danhmuc .flex1 .flex1col3 >div{
 	margin-top: 20px;
 } 
+
+/**/
+/*slick dot*/
+.myslide ul.slick-dots{
+	list-style: none;
+	position: absolute;
+	bottom:0px;
+	right: 0px;
+}
+.myslide ul.slick-dots li{
+	display: inline-block;
+	margin-right: 3px;
+}
+.myslide ul.slick-dots li:last-child{
+	margin-right: 0px;
+}
+.myslide ul.slick-dots button{
+	outline: none;
+	background-color: #fba100;
+	color: #fff;
+	border:none;
+	padding:2px 5px;
+	cursor: pointer;
+}
+.myslide ul.slick-dots li.slick-active button{
+	background-color: #228f0f;
+}
+.myslide .slick-arrow{
+	display: none!important;
+}
+.myslide img{
+	height: 350px;
+}

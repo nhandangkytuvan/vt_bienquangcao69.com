@@ -93,8 +93,22 @@
 						</form>
 					</div>
 					<div class="myslide">
-						<img src="{{ asset('public/images/desktop/home-1.png') }}" class="center-block img-responsive">
+						<div>
+							<img src="{{ asset('public/images/desktop/home-1.png') }}" class="center-block">
+						</div>
+						<div>
+							<img src="{{ asset('public/images/desktop/home-1.png') }}" class="center-block">
+						</div>
 					</div>
+					<script>
+						$('.myslide').slick({
+						  	slidesToShow: 1,
+						  	slidesToScroll: 1,
+						  	autoplay: true,
+						  	autoplaySpeed: 2000,
+						  	dots: true,
+						});	
+					</script>
 				</div>
 				<div class="flex1col3">
 					<h3 class="text-center title1">Tư vấn - hỗ trợ</h3>
