@@ -35,6 +35,9 @@
 	border-left: none;
 	border-top:none;
 }
+.home .posts-sp .post-middle .flex1col1 h3{
+	max-height: 180px;overflow: hidden;
+}
 .home .posts-sp .post-middle .flex1col1:nth-child(2n+1){
 	padding-right: 10px;
 	padding-bottom: 10px;
