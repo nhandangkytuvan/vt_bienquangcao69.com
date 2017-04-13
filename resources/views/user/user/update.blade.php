@@ -36,6 +36,8 @@
             <td>
                 <ul class="list-group">
                     <li class="list-group-item">Fix ảnh ở vuông ở trang chủ , trang sản phẩm width: width: 225px;height: 188px;</li>
+                    <li class="list-group-item">Fix lỗi bài viết gần nhất hiện ra trước</li>
+                    <li class="list-group-item">Ảnh mobile tự động co giãn lên chỉ có cách up ảnh sản phẩm cùng kích thước giống nhau sẽ đẹp width: 225px;height: 188px;</li>
                 </ul>
             </td>
             <td></td>
