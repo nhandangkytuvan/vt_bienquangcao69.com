@@ -175,3 +175,7 @@
 .posts .post-comments .lists-facebook{
     margin-top: 5px;
 }
+/**/
+.posts .post-detail img{
+    max-width: 100%;
+}
