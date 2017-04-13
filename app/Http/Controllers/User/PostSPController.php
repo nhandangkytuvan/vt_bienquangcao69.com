@@ -41,7 +41,9 @@ class PostSPController extends Controller{
                 //
                 $postsp = new PostSP;
                 $postsp->post_id = $post->id;
-                $postsp->post_price = $request->input('post_price');
+                if($request->has('post_price')){
+                    $postsp->post_price = $request->input('post_price');
+                }
                 $postsp->save();
                 
                 return redirect('user/post-sp/edit/'.$post->id);
@@ -87,7 +89,9 @@ class PostSPController extends Controller{
                 Session::flash('success','Sửa thành công.');
                 //
                 $postsp = $post->postSP;
-                $postsp->post_price = $request->input('post_price');
+                if($request->has('post_price')){
+                    $postsp->post_price = $request->input('post_price');
+                }
                 $postsp->save();
                 //
                 return redirect('user/post-sp/edit/'.$post->id);

@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(){
         View::share('setting',Setting::first());
         View::share('product',Term::find(1));
-        View::share('posts_sidebar',Post::where('post_group',1)->limit(5)->get());
+        View::share('posts_sidebar',Post::where('post_group',1)->latest()->limit(5)->get());
     }
     /**
      * Register any application services.
