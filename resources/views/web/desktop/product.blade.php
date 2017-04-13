@@ -28,7 +28,13 @@
 				@foreach($posts as $post)
 				<div class="flex1col1">
 					<h3 class="text-uppercase post-name text-center"><a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a></h3>
-					<h3 class="post-avatar"><a href="{{ MyAPI::getUrlPostObj($post) }}" class="hvr-float-shadow"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a></h3>
+					<h3 class="post-avatar">
+						<a href="{{ MyAPI::getUrlPostObj($post) }}" class="hvr-float-shadow">
+						@if($post->post_avatar)
+						<img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive">
+						@endif
+						</a>
+					</h3>
 					<h4 class="text-center text-uppercase post-price">{{ $post->postSP ? number_format($post->postSP->post_price,0,',','.') : '' }} VNĐ</h4>
 				</div>
 				@endforeach
