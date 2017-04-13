@@ -42,6 +42,17 @@
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td>1</td>
+            <td>13.4</td>
+            <td>
+                <ul class="list-group">
+                    <li class="list-group-item">Fix click vào tuyển dụng là bài đầu tiên</li>
+                    <li class="list-group-item">Hiện có slide trang chủ, hiện slide chưa quản trị được</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
     </table>
 </div>
 @endsection('content')

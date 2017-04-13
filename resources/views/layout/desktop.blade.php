@@ -59,7 +59,14 @@
 						<div><h3><a href="{{ MyAPI::getUrlPostID(12) }}" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="{{ MyAPI::getUrlTermID(14) }}" class="flex align-items-center justify-content-center">Tuyển dụng</a></h3>
+						<div>
+							<h3>
+								@php 
+									$term_td = MyAPI::getTermID(14) ; 
+								@endphp	
+								<a href="{{ MyAPI::getUrlPostObj($term_td->post()->first()) }}" class="flex align-items-center justify-content-center">Tuyển dụng</a>
+							</h3>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -125,7 +125,10 @@
 				<li>
 					<h4>
 						<i class="fa fa-angle-double-right"></i> 
-						<a href="{{ MyAPI::getUrlTermID(14) }}">Tuyển dụng</a>
+						@php 
+							$term_td = MyAPI::getTermID(14) ; 
+						@endphp
+						<a href="{{ MyAPI::getUrlPostObj($term_td->post()->first()) }}">Tuyển dụng</a>
 					</h4>
 				<li>
 					<h4>
