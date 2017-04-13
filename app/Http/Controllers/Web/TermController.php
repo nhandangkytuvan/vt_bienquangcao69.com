@@ -15,42 +15,55 @@ class TermController extends Controller{
         event(new VisitTermEvent($term));
         // -----------
         $data['term'] = $term;
+        $sanpham = Term::find(1);
+        $sanpham_ids = $sanpham->children()->pluck('id')->toArray();
+        $sanpham_ids[] = 1;
         if(BrowserDetect::isDesktop()){
-            switch ($term_id) {
-                case 12:
-                    return view('web.desktop.new',['data'=>$data]); 
-                    break;
-                case 13:
-                    return view('web.desktop.new',['data'=>$data]); 
-                    break;
-                case 14:
-                    return view('web.desktop.new',['data'=>$data]); 
-                    break;
-                case 15:
-                    return view('web.desktop.new',['data'=>$data]); 
-                    break;
-                default:
-                    return view('web.desktop.product',['data'=>$data]); 
-                    break;
+            if(in_array($term_id, $sanpham_ids)){
+                return view('web.desktop.product',['data'=>$data]); 
+            }else{
+                return view('web.desktop.new',['data'=>$data]); 
             }
+            // switch ($term_id) {
+            //     case 12:
+            //         return view('web.desktop.new',['data'=>$data]); 
+            //         break;
+            //     case 13:
+            //         return view('web.desktop.new',['data'=>$data]); 
+            //         break;
+            //     case 14:
+            //         return view('web.desktop.new',['data'=>$data]); 
+            //         break;
+            //     case 15:
+            //         return view('web.desktop.new',['data'=>$data]); 
+            //         break;
+            //     default:
+            //         return view('web.desktop.product',['data'=>$data]); 
+            //         break;
+            // }
         }else{
-            switch ($term_id) {
-                case 12:
-                    return view('web.mobile.new',['data'=>$data]);
-                    break;
-                case 13:
-                    return view('web.mobile.new',['data'=>$data]);
-                    break;
-                case 14:
-                    return view('web.mobile.new',['data'=>$data]); 
-                    break;
-                case 15:
-                    return view('web.mobile.new',['data'=>$data]); 
-                    break;
-                default:
-                    return view('web.mobile.product',['data'=>$data]);  
-                    break;
+            if(in_array($term_id, $sanpham_ids)){
+                return view('web.mobile.product',['data'=>$data]); 
+            }else{
+                return view('web.mobile.new',['data'=>$data]); 
             }
+            // switch ($term_id) {
+            //     case 12:
+            //         return view('web.mobile.new',['data'=>$data]);
+            //         break;
+            //     case 13:
+            //         return view('web.mobile.new',['data'=>$data]);
+            //         break;
+            //     case 14:
+            //         return view('web.mobile.new',['data'=>$data]); 
+            //         break;
+            //     case 15:
+            //         return view('web.mobile.new',['data'=>$data]); 
+            //         break;
+            //     default:
+            //         return view('web.mobile.product',['data'=>$data]);  
+            //         break;
+            // }
         }
     }
 }

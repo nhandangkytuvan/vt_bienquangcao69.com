@@ -40,7 +40,7 @@
 						<div><h3><a href="{{ MyAPI::getUrlPostID(11) }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center menu-items">
-						<div class="pos-relative">
+						<div class="pos-relative" style="z-index: 9;">
 							<h3><a href="{{ MyAPI::getUrlTermID(1) }}" class="flex align-items-center justify-content-center">Sản phẩm</a></h3>
 							<div class="menu-item pos-absolute">
 								<ul>
