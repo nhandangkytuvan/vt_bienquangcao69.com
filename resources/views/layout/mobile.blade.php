@@ -83,7 +83,10 @@
 					<div>
 						<h2 class="text-uppercase">DOANH NGHIỆP TRUYỀN THÔNG VÀ ĐẦU TƯ </h2>
 						<h2 class="text-uppercase">QUẢNG CÁO 69</h2>
-						<h5>Điện thoại hỗ trợ: 09 232 99998 - 09 112 88886 </h5>
+						<h5>Điện thoại hỗ trợ: 
+							<a href="tel:09 232 99998" class="dis-inline-block">09 232 99998</a> - 
+							<a href="tel:09 232 99998" class="dis-inline-block">09 232 99998</a>
+						</h5>
 						<h5>Email hỗ trợ: bienquangcao69@gmail.com</h5>
 						<h5>Trụ sở: 336 đường bưởi  </h5>
 						<h5>Xưởng SX: 70/122 Tây Mỗ - Từ Liêm - Hà Nội</h5>
