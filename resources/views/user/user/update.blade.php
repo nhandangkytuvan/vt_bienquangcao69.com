@@ -30,6 +30,16 @@
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td>1</td>
+            <td>13.4</td>
+            <td>
+                <ul class="list-group">
+                    <li class="list-group-item">Fix ảnh ở vuông ở trang chủ , trang sản phẩm width: width: 225px;height: 188px;</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
     </table>
 </div>
 @endsection('content')
