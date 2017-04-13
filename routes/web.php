@@ -24,6 +24,7 @@ Route::group(['middleware' => ['check-user']], function () {
 	Route::any('user/user/block/{user_id?}','User\UserController@block')->middleware('check-admin');
 	Route::any('user/user/delete/{user_id?}','User\UserController@delete')->middleware('check-admin');
 	Route::post('user/user/password','User\UserController@password');
+	Route::any('user/user/update','User\UserController@update');
 	// post
 	Route::any('user/post/create','User\PostController@create');
 	Route::any('user/post/edit/{post_id?}','User\PostController@edit');

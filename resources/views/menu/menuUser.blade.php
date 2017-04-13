@@ -51,6 +51,9 @@
             <li class="list-group-item"><a href="{{ url('user/setting/create') }}">
                 <i class="fa fa-globe"></i> Web</a>
             </li>
+            <li class="list-group-item"><a href="{{ url('user/user/update') }}">
+                <i class="glyphicon glyphicon-repeat"></i> Hoàn thiện</a>
+            </li>
         </ul>
     </div> 
 </div> 

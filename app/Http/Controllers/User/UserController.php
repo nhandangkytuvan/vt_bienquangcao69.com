@@ -153,4 +153,7 @@ class UserController extends Controller{
 			return view('user.user.block',['data'=>$data]);
 		}
 	}
+	public function update(Request $request){
+		return view('user.user.update');
+	}
 }
