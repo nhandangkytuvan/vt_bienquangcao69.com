@@ -48,7 +48,9 @@
 }
 /**/
 .post .post-detail img{
-    max-width: 100%;
+    max-width: 100%!important;
+    height: auto!important;
+    display: block;
 }
 /**/
 .post .post-comments{
