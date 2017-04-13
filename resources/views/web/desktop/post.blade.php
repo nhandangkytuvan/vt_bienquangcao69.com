@@ -59,6 +59,11 @@
 					<p>Xưởng SX: 70/122 Tây Mỗ - Từ Liêm - Hà Nội</p>
 				</div>
 			</div>
+			<div class="faceboo-toolbar">
+				<div class="fb-like" data-href="{{ MyAPI::getUrlPostObj($data['post']) }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+				<div class="fb-share-button" data-href="{{ MyAPI::getUrlPostObj($data['post']) }}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{ MyAPI::getUrlPostObj($data['post']) }}">Chia sẻ</a></div>
+				<div class="fb-send" data-href="{{ MyAPI::getUrlPostObj($data['post']) }}"></div>
+			</div>
 			@php  
 				$term = $data['post']->term;
 				$posts = $term->post()->where('id','<>',$data['post']->id)->limit(6)->get();

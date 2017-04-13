@@ -53,6 +53,16 @@
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td>1</td>
+            <td>13.4</td>
+            <td>
+                <ul class="list-group">
+                    <li class="list-group-item">Thêm nút thích, chia ser facebook vào bài viết</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
     </table>
 </div>
 @endsection('content')
