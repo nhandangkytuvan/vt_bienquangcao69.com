@@ -20,10 +20,10 @@
 				@if($data['term']->children()->count())
 					@php
 						$term_childrens = $data['term']->children()->pluck('id')->toArray();
-						$posts = App\Post::whereIn('term_id',$term_childrens)->paginate(8);
+						$posts = App\Post::whereIn('term_id',$term_childrens)->latest()->paginate(8);
 					@endphp
 				@else
-					@php $posts = $data['term']->post()->paginate(8); @endphp
+					@php $posts = $data['term']->post()->latest()->paginate(8); @endphp
 				@endif
 				@foreach($posts as $post)
 				<div class="flex1col1">

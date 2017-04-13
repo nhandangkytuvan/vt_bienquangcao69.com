@@ -23,7 +23,7 @@
 		<div class="flex1col2">
 			<h3 class="text-center text-uppercase">{{ $data['term']->term_name }}</h3>
 			<div class="posts">
-				@php $posts = $data['term']->post()->paginate(8); @endphp
+				@php $posts = $data['term']->post()->latest()->paginate(8); @endphp
 				@foreach($posts as $post)
 				<div class="post">
 					<div class="flex flex2 justify-content-between">

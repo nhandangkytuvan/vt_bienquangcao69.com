@@ -20,6 +20,9 @@
 .home .post-sps .flex1 .flex1col1 .post-avatar{
 	margin-top: 10px;
 }
+.home .post-sps .flex1 .flex1col1 .post-avatar img{
+	width: 225px;height: 188px;
+}
 .home .post-sps .flex1 .flex1col1 .post-price{
 	font-size: 12px;
 	margin-top: 5px;

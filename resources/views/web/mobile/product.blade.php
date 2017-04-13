@@ -15,7 +15,7 @@
 	<main class="container product">
 		<h3>{{ $data['term']->term_name }}</h3>
 		@php
-			$posts = $data['term']->post()->paginate(9);
+			$posts = $data['term']->post()->latest()->paginate(9);
 		@endphp
 		<div class="posts-sp">
 			@if($posts[0])

@@ -16,7 +16,7 @@
 		<h3>{{ $data['term']->term_name }}</h3>
 		<div class="posts-new">
 			@php
-				$posts = $data['term']->post()->paginate(8);
+				$posts = $data['term']->post()->latest()->paginate(8);
 			@endphp
 			@foreach($posts as $post)
 			<div class="post-top">

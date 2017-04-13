@@ -82,18 +82,6 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-9">
-                    <div class="alert alert-success">
-                        <ul>
-                            <li>
-                                Để tránh bị lỗi , tạm thời bài viết về sản phẩm hãy vào mục 
-                                    <span class="label label-success"><i class="fa fa-shopping-basket"></i> viết sản phẩm </span> 
-                                và chọn danh mục sản phẩm<br> Bài viết về tin tức - công trình viết ở mục <span class="label label-success"><i class="glyphicon glyphicon-edit"></i> Viết bài mới</span>  và chọn danh mục <span class="label label-danger"> ko phải là sản phẩm</span> tương ứng.
-                            </li>
-                            <li>
-                                Kích thước ảnh đại diện sản phẩm là : 255 rộng x 188 cao. vậy để hiển thị mobile đẹp thì hãy giữ tỉ lệ này.
-                            </li>
-                        </ul>
-                    </div>
                     @if(Session::has('success'))
                         <div class="alert alert-success">
                             <span class="glyphicon glyphicon-check"></span> 
