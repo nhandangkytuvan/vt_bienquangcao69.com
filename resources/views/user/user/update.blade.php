@@ -63,6 +63,16 @@
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td>1</td>
+            <td>14.4</td>
+            <td>
+                <ul class="list-group">
+                    <li class="list-group-item">Auto play lood video </li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
     </table>
 </div>
 @endsection('content')

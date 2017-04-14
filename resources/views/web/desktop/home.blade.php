@@ -54,7 +54,7 @@
 					@endforeach
 				</div>
 				<div class="flex1col3">
-					<video width="100%" height="275px" controls>
+					<video width="100%" height="275px" controls autoplay loop>
 					  	<source src="{{ asset('public/video/videoled.mp4') }}" type="video/mp4">
 					</video>
 				</div>
