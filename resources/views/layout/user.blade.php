@@ -115,11 +115,4 @@
         </div>
     </main>
 </body>
-<script>  
-$(document).ready(function() {
-    $('.menuSystem').scrollToFixed({
-        marginTop: 70,
-    });
-});
-</script>
 </html>
