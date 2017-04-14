@@ -69,6 +69,7 @@
             <td>
                 <ul class="list-group">
                     <li class="list-group-item">Auto play lood video </li>
+                    <li class="list-group-item">Quản lý slide trong menu </li>
                 </ul>
             </td>
             <td></td>

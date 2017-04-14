@@ -100,12 +100,11 @@
 						</form>
 					</div>
 					<div class="myslide">
+						@foreach($slides as $slide)
 						<div>
-							<img src="{{ asset('public/images/desktop/home-1.png') }}" class="center-block">
+							<a href="{{ $slide->slide_url }}"><img src="{{ $slide->slide_image }}" class="center-block"></a>
 						</div>
-						<div>
-							<img src="{{ asset('public/images/desktop/home-1.png') }}" class="center-block">
-						</div>
+						@endforeach
 					</div>
 					<script>
 						$('.myslide').slick({

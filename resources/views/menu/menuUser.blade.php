@@ -37,6 +37,8 @@
             <li class="list-group-item"><a href="{{ url('user/media/create') }}"><i class="fa fa-cloud-upload"></i> Gửi ảnh</a></li>
             <li class="list-group-item"><a href="{{ url('user/media/index?view=icon') }}"><i class="glyphicon glyphicon-picture"></i> Thư viện ảnh</a></li>
             <li class="list-group-item"><a href="{{ url('user/comment/index') }}"><i class="glyphicon glyphicon-question-sign"></i> Hỏi đáp</a></li>
+            <li class="list-group-item"><a href="{{ url('user/slide/create') }}"><i class="fa fa-fire"></i> Thêm slide</a></li>
+            <li class="list-group-item"><a href="{{ url('user/slide/index') }}"><i class="glyphicon glyphicon-sort-by-alphabet"></i> Danh sách slide</a></li>
             <li class="list-group-item"><a href="{{ url('user/user/edit') }}"><i class="glyphicon glyphicon-user"></i> Sửa tài khoản</a></li>
         </ul>
     </div>
