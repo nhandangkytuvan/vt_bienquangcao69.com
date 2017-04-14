@@ -14,6 +14,7 @@
     <script src="{{ asset('public/js/global/jquery-1.12.3.min.js') }}"></script>
     <script src="{{ asset('public/js/global/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('public/js/global/jquery.form.min.js') }}"></script>
+    <script src="{{ asset('public/js/global/Jquery-Price-Format/jquery.priceformat.min.js') }}"></script>
     <script src="{{ asset('public/js/global/bootstrap/js/bootstrap.js') }}"></script>
     <script src="{{ asset('public/js/global/jquery-scrolltofixed-min.js') }}"></script>
     <script src="{{ asset('public/js/global/autosize/dist/autosize.min.js') }}"></script>

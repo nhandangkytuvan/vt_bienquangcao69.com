@@ -45,7 +45,7 @@
                         <select name="term_id" class="form-control">
                             <option value="">Chọn danh mục</option>
                             @foreach($data['terms'] as $key=> $term)
-                                @if($term->term_id == 0)
+                                @if($term->term_id != 1 && $term->id != 1)
                                     <option {{ $data['post']->term_id == $term->id ? 'selected' : '' }} value="{{ $term->id }}">{{ $term->term_name }}</option>
                                     @foreach($data['terms'] as $key2=> $term2)
                                         @if($term2->term_id == $term->id)

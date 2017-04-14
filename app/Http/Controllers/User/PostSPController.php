@@ -43,6 +43,8 @@ class PostSPController extends Controller{
                 $postsp->post_id = $post->id;
                 if($request->has('post_price')){
                     $postsp->post_price = $request->input('post_price');
+                    $postsp->post_price = str_replace(',00','',$postsp->post_price);
+                    $postsp->post_price = str_replace('.','',$postsp->post_price);
                 }
                 $postsp->save();
                 
@@ -91,6 +93,8 @@ class PostSPController extends Controller{
                 $postsp = $post->postSP;
                 if($request->has('post_price')){
                     $postsp->post_price = $request->input('post_price');
+                    $postsp->post_price = str_replace(',00','',$postsp->post_price);
+                    $postsp->post_price = str_replace('.','',$postsp->post_price);
                 }
                 $postsp->save();
                 //

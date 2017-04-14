@@ -29,18 +29,18 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Giá sản phẩm</label>
-                        <input type="number" class="form-control" name="post_price" value="{{ old('post_price') }}">
+                        <input type="text" class="form-control" name="post_price" value="{{ old('post_price') }}">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8">
                     <div class="form-group">
-                        <label class="control-label">Danh mục</label>
+                        <label class="control-label">Danh mục SP</label>
                         <select name="term_id" class="form-control">
                             <option value="">Chọn danh mục</option>
                             @foreach($data['terms'] as $key=> $term)
-                                @if($term->term_id == 0)
+                                @if($term->term_id == 1)
                                     <option value="{{ $term->id }}">{{ $term->term_name }}</option>
                                     @foreach($data['terms'] as $key2=> $term2)
                                         @if($term2->term_id == $term->id)

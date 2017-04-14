@@ -33,4 +33,9 @@ $(document).ready(function() {
     	timepicker:false,
     	format:'d.m.Y',
     });
+    $('input[name="post_price"]').priceFormat({
+    	prefix: '',
+	    centsSeparator: ',',
+	    thousandsSeparator: '.'
+    });
 });
