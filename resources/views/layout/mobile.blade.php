@@ -27,7 +27,7 @@
 <body>
 	<header>
 		<div class="container">
-			<h2><img src="{{ asset('public/images/mobile/header-1.png') }}" class="img-responsive center-block"></h2>
+			<h2><img src="{{ $links[1]->link_url }}" class="img-responsive center-block"></h2>
 		</div>
 	</header>
 	<menu>

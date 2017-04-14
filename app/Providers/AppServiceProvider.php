@@ -5,6 +5,7 @@ use App\Setting;
 use App\Term;
 use App\Post;
 use App\Slide;
+use App\Link;
 use View;
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('product',Term::find(1));
         View::share('posts_sidebar',Post::where('post_group',1)->latest()->limit(5)->get());
         View::share('slides',Slide::get());
+        View::share('links',Link::get());
     }
     /**
      * Register any application services.

@@ -58,7 +58,11 @@ Route::group(['middleware' => ['check-user']], function () {
 	Route::any('user/setting/edit/{setting_id}', 'User\SettingController@edit')->middleware('check-admin');
 	// slide
 	Route::any('user/slide/create','User\SlideController@create')->middleware('check-admin');
-	Route::any('user/slide/edit/{term_id?}','User\SlideController@edit')->middleware('check-admin');
-	Route::any('user/slide/delete/{term_id?}','User\SlideController@delete')->middleware('check-admin');
+	Route::any('user/slide/edit/{slide_id?}','User\SlideController@edit')->middleware('check-admin');
+	Route::any('user/slide/delete/{slide_id?}','User\SlideController@delete')->middleware('check-admin');
 	Route::any('user/slide/index{query?}','User\SlideController@index');
+	// link
+	Route::any('user/link/create','User\LinkController@create')->middleware('check-admin');
+	Route::any('user/link/edit/{link_id?}','User\LinkController@edit')->middleware('check-admin');
+	Route::any('user/link/index{query?}','User\LinkController@index');
 });

@@ -29,7 +29,9 @@
 </head>
 <body>
     <header>
-		<h2><a href="#"><img src="{{ asset('public/images/desktop/header-1.png') }}" class="center-block img-responsive"></a></h2>
+		<h2>
+			<img src="{{ $links[0]->link_url }}" class="center-block img-responsive">
+		</h2>
 	    <menu>
 			<div class="container">
 				<div class="flex flex1 justify-content-around">
