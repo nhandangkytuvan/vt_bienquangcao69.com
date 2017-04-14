@@ -3,8 +3,8 @@
     @include('menu.menuUser')
 @endsection('menu')
 @section('content')
-<div class="alert alert-success">
-    Để tránh bị lỗi , tạm thời bài viết về sản phẩm hãy vào mục <span class="label label-success"><i class="fa fa-shopping-basket"></i> viết sản phẩm </span> và chọn danh mục sản phẩm
+<div class="alert alert-danger">
+    <span class="label label-success">Quản trị thay đổi giao diện cập nhật thêm, sửa đổi</span> tạm thời đã hoàn tất. <br>Dự án sẽ dừng lại vào ngày mai, bàn giao hoàn tất dữ liệu - code
 </div>
 <div class="panel panel-default">
     <div class="panel-heading text-center">
@@ -70,10 +70,30 @@
                 <ul class="list-group">
                     <li class="list-group-item">Auto play lood video </li>
                     <li class="list-group-item">Quản lý slide trong menu </li>
+                    <li class="list-group-item">Quản lý ảnh trên cùng trong menu </li>
+                    <li class="list-group-item">Giá được tách khi nhập ở admin </li>
                 </ul>
             </td>
             <td></td>
         </tr>
     </table>
 </div>
+<style>
+    .table.table-bordered tr td:nth-child(3){
+        padding-left: 0;
+    }
+    .table.table-bordered ul.list-group{
+        border-radius: 0;
+    }
+    .table.table-bordered ul.list-group li.list-group-item{
+        border-left: none;
+        border-right: none;
+    }
+    .table.table-bordered ul.list-group li.list-group-item:first-child{
+        border-top: none;
+    }
+    .table.table-bordered ul.list-group li.list-group-item:last-child{
+        border-bottom: none;
+    }
+</style>
 @endsection('content')
