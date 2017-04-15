@@ -23,6 +23,7 @@ class PostSPController extends Controller{
             $post->post_group = 1;//sp
             $post->post_description = $request->input('post_description');
             $post->post_detail = $request->input('post_detail');
+            $post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
             $post->post_keyword = $request->input('post_keyword');
             if($request->has('post_status')){
                 $post->post_status = 1;
@@ -37,8 +38,8 @@ class PostSPController extends Controller{
                 $post->post_avatar = $post_avatar;
             }
             if($post->save()){
-                $post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
-                $post->save();
+                //$post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
+                //$post->save();
                 Session::flash('success','Thêm thành công.');
                 //
                 $postsp = new PostSP;
@@ -77,6 +78,7 @@ class PostSPController extends Controller{
             $post->post_group = 1;//sp
             $post->post_description = $request->input('post_description');
             $post->post_detail = $request->input('post_detail');
+            $post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
             $post->post_keyword = $request->input('post_keyword');
             if($request->has('post_status')){
                 $post->post_status = 1;
@@ -90,8 +92,8 @@ class PostSPController extends Controller{
                 $post->post_avatar = $post_avatar;
             }
             if($post->save()){
-                $post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
-                $post->save();
+                //$post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
+                //$post->save();
                 Session::flash('success','Sửa thành công.');
                 //
                 $postsp = $post->postSP;

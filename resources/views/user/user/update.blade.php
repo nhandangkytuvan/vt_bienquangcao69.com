@@ -76,6 +76,16 @@
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td>1</td>
+            <td>15.4</td>
+            <td>
+                <ul class="list-group">
+                    <li class="list-group-item">Fix lỗi ảnh ko hiển thj trong soạn thảo</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
     </table>
 </div>
 <style>
