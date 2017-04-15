@@ -178,19 +178,36 @@
 						<div><h3><a href="{{ url('/') }}" class="flex align-items-center justify-content-center">Trang chủ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="{{ url('about') }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlPostID(11) }}" class="flex align-items-center justify-content-center">Giới thiệu</a></h3></div>
 					</div>
-					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="{{ MyAPI::getUrlTermID(1) }}" class="flex align-items-center justify-content-center">Sản phẩm</a></h3></div>
+					<div class="flex1col1 flex align-items-center justify-content-center menu-items">
+						<div class="pos-relative" style="z-index: 9;">
+							<h3><a href="{{ MyAPI::getUrlTermID(1) }}" class="flex align-items-center justify-content-center">Sản phẩm</a></h3>
+							<div class="menu-item pos-absolute">
+								<ul>
+									@php $product_childs = $product->children @endphp
+									@foreach($product_childs as $product_child)
+									<li><h3><a href="{{ MyAPI::getUrlTermID($product_child->id) }}">{{ $product_child->term_name }}</a></h3></li>
+									@endforeach
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
 						<div><h3><a href="{{ MyAPI::getUrlTermID(13) }}" class="flex align-items-center justify-content-center">Công trình mới</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="{{ url('address') }}" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
+						<div><h3><a href="{{ MyAPI::getUrlPostID(12) }}" class="flex align-items-center justify-content-center">Liên hệ</a></h3></div>
 					</div>
 					<div class="flex1col1 flex align-items-center justify-content-center">
-						<div><h3><a href="{{ MyAPI::getUrlTermID(14) }}" class="flex align-items-center justify-content-center">Tuyển dụng</a></h3></div>
+						<div>
+							<h3>
+								@php 
+									$term_td = MyAPI::getTermID(14) ; 
+								@endphp	
+								<a href="{{ MyAPI::getUrlPostObj($term_td->post()->first()) }}" class="flex align-items-center justify-content-center">Tuyển dụng</a>
+							</h3>
+						</div>
 					</div>
 				</div>
 			</menu>

@@ -22,7 +22,48 @@ footer .khach-hang >div{
 footer menu{
 	background-color: #228f0f;
 }
-footer menu .flex1 .flex1col1 a{
+footer menu .flex1 .flex1col1{
+	width: 16.67%;
+}
+footer menu .flex1 .flex1col1 div{
+	width: 100%;
+}
+footer menu .flex1 .flex1col1 >div >h3>a{
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+	width: 100%;
+} 
+footer menu .flex1 .flex1col1 div.menu-item{
+	display: none;
+}
+footer menu .flex1 .flex1col1:hover div.menu-item{
+	display: block;
+	bottom:50px;
+}
+footer menu .flex1 .flex1col1:hover,footer menu .flex1 .flex1col1.active{
+	background-color: #0e5f00;
+}
+footer menu .flex1 .flex1col1 div.menu-item ul{
+	list-style: none;
+	background-color: #259012;
+	width: 220px;
+}
+footer menu .flex1 .flex1col1 div.menu-item ul li{
+	border-bottom: 1px solid #57aa49;
+}
+footer menu .flex1 .flex1col1 div.menu-item ul li h3 a{
+	padding:5px 10px;
+	font-weight: normal;
+	font-size: 14px;
+	display: block;
+	color: #fff;
+}
+footer menu .flex1 .flex1col1 div.menu-item ul li:hover{
+	background-color: #0e5f00;
+}
+footer menu .flex1 .flex1col1 >div>div >h3>a{
 	height: 50px;
 	color: #fff;
 	font-size: 16px;

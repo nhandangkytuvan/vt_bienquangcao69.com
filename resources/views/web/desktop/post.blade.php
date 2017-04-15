@@ -40,7 +40,7 @@
 <main class="container posts">
 	<div class="flex flex1 justify-content-between">
 		<div class="flex1col1">
-			@include('web.desktop.slidebar')
+			@include('web.desktop.slidebar',['data'=>$data])
 		</div>
 		<div class="flex1col2">
 			<h1 class="text-uppercase">{{ $data['post']->post_name }}</h1>
