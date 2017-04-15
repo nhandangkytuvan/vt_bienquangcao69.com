@@ -72,7 +72,7 @@
             <td><a href="{{ url($post->term->term_alias.'/'.$post->term->id) }}">{{ $post->term->term_name }}</a></td>
             <td>{{ $post->postSP ? number_format($post->postSP->post_price,0,',','.') : '' }}</td>
             <td>{{ $post->user->user_name }}</td>
-            <td>{{ isset($post->view) ? $post->view->view_sum : '' }}</td>
+            <td>{{ isset($post->visit) ? $post->visit->visit_sum : '' }}</td>
             <td>{{ date('d.m',strtotime($post->created_at)) }}</td>
             <td>
                 <div class="clearfix">

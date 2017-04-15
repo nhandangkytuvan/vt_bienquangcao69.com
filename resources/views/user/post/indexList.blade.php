@@ -77,7 +77,7 @@
                 </div>
             </td>
             <td>{{ $post->user->user_name }}</td>
-            <td>{{ isset($post->view) ? $post->view->view_sum : '' }}</td>
+            <td>{{ isset($post->visit) ? $post->visit->visit_sum : '' }}</td>
             <td>{{ date('d.m',strtotime($post->created_at)) }}</td>
             <td>
                 <div class="clearfix">
