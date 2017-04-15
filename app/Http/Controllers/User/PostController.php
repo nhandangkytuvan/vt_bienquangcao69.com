@@ -36,6 +36,8 @@ class PostController extends Controller{
                 $post->post_avatar = $post_avatar;
             }
             if($post->save()){
+                $post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
+                $post->save();
                 Session::flash('success','Thêm thành công.');
                 return redirect('user/post/edit/'.$post->id);
             }else{
@@ -77,6 +79,8 @@ class PostController extends Controller{
                 $post->post_avatar = $post_avatar;
             }
             if($post->save()){
+                $post->post_detail = str_replace("src=\"../../public/img","src=\"../../../public/img",$post->post_detail);
+                $post->save();
                 Session::flash('success','Sửa thành công.');
                 return redirect('user/post/edit/'.$post->id);
             }else{

@@ -59,7 +59,7 @@
             <td>ID</td>
             <td>Tên</td>
             <td>Mục</td>
-            <td>T.thái</td>
+            <td>Giá</td>
             <td>T.giả</td>
             <td>T.xem</td>
             <td>Date</td>
@@ -70,12 +70,7 @@
             <td>{{ $post->id }}</td>
             <td><a href="{{ url($post->post_alias.'/'.$post->id.'.htm') }}">{{ $post->post_name }}</a></td>
             <td><a href="{{ url($post->term->term_alias.'/'.$post->term->id) }}">{{ $post->term->term_name }}</a></td>
-            <td>
-                <div class="radio {{ $post->post_status == 1 ? 'radio-success' : 'radio-default' }} radio-inline">
-                    <input type="radio" checked="">
-                    <label></label>
-                </div>
-            </td>
+            <td>{{ $post->postSP ? number_format($post->postSP->post_price,0,',','.') : '' }}</td>
             <td>{{ $post->user->user_name }}</td>
             <td>{{ isset($post->view) ? $post->view->view_sum : '' }}</td>
             <td>{{ date('d.m',strtotime($post->created_at)) }}</td>
