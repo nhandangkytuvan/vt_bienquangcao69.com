@@ -14,7 +14,7 @@
                         <label class="control-label">Ảnh</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
-                            <input type="file" class="form-control" name="media_file" id="fileUpload">
+                            <input type="file" class="form-control" name="media_file[]" multiple>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label class="control-label">Thư mục</label>
                         <select name="term_id" class="form-control">
-                            <option value="">Chọn thư mục</option>
+                            <option value="0">Chọn thư mục</option>
                             @foreach($data['terms'] as $key=> $term)
                                 @if($term->term_id == 0)
                                     <option value="{{ $term->id }}">{{ $term->term_name }}</option>

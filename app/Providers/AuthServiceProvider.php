@@ -25,26 +25,33 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
         Gate::define('edit-post', function ($user, $post) {
-            return $user->id == $post->user_id;
+            //return $user->id == $post->user_id;
+            return false;
         });
         Gate::define('delete-post', function ($user, $post) {
-            return $user->id == $post->user_id;
+            //return $user->id == $post->user_id;
+            return false;
         });
         Gate::define('edit-media', function ($user, $media) {
-            return $user->id == $media->user_id;
+            //return $user->id == $media->user_id;
+            return false;
         });
         Gate::define('delete-media', function ($user, $media) {
-            return $user->id == $media->user_id;
+            //return $user->id == $media->user_id;
+            return false;
         });
         Gate::define('edit-term', function ($user, $term) {
-            return $user->id == $term->user_id;
+            //return $user->id == $term->user_id;
+            return false;
         });
         Gate::define('delete-term', function ($user, $term) {
-            if($user->id == $term->user_id||$user->user_group=='admin'){
-                return true;
-            }else{
-                return false;
-            }
+            // if($user->id == $term->user_id||$user->user_group=='admin'){
+            //     return true;
+            // }else{
+            //     return false;
+            // }
+
+            return false;
         });
     }
 }

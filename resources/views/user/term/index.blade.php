@@ -10,13 +10,13 @@
                 <option value="0">Chọn danh mục</option>
                 @foreach($data['terms_search'] as $key=> $term)
                     @if($term->term_id == 0)
-                        <option {{ $data['request']->input('term_id')==$term->id ? 'selected' : '' }} value="{{ $term->id }}">{{ $term->term_name }}</option>
+                        <option {{ Request::input('term_id')==$term->id ? 'selected' : '' }} value="{{ $term->id }}">{{ $term->term_name }}</option>
                         @foreach($data['terms_search'] as $key2=> $term2)
                             @if($term2->term_id == $term->id)
-                                <option {{ $data['request']->input('term_id')==$term2->id ? 'selected' : '' }} value="{{ $term2->id }}">--{{ $term2->term_name }}</option>
+                                <option {{ Request::input('term_id')==$term2->id ? 'selected' : '' }} value="{{ $term2->id }}">--{{ $term2->term_name }}</option>
                                 @foreach($data['terms_search'] as $key3=> $term3)
                                     @if($term3->term_id == $term2->id)
-                                        <option {{ $data['request']->input('term_id')==$term3->id ? 'selected' : '' }} value="{{ $term2->id }}">----{{ $term2->term_name }}</option>
+                                        <option {{ Request::input('term_id')==$term3->id ? 'selected' : '' }} value="{{ $term2->id }}">----{{ $term2->term_name }}</option>
                                         @php unset($data['terms_search'][$key3]) @endphp
                                     @endif
                                 @endforeach
@@ -28,7 +28,7 @@
             </select>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tên term" name="term_name" value="{{ $data['request']->input('term_name') }}">
+            <input type="text" class="form-control" placeholder="Tên term" name="term_name" value="{{ Request::input('term_name') }}">
         </div>
         <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> Tìm kiếm</button>
     </form>

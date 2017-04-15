@@ -10,47 +10,32 @@ use Gate;
 use Session;
 class MediaController extends Controller{
     protected $rules_create = [
-        'media_name' => 'required',
         'media_file' => 'required',
-        'term_id' => 'required',
     ];
     protected $messages_create = [
-        'media_name.required' => 'Bạn chưa nhập tên ảnh.',
         'media_file.required' => 'Bạn chưa chọn ảnh úp lên.',
-        'term_id.required' => 'Bạn chưa chọn thư mục lưu.',
-    ];
-    protected $rules_edit = [
-        'media_name' => 'required',
-        'term_id' => 'required',
-    ];
-    protected $messages_edit = [
-        'media_name.required' => 'Bạn chưa nhập tên ảnh.',
-        'term_id.required' => 'Bạn chưa chọn thư mục lưu.',
     ];
     public function create(Request $request){
         $user = Session::get('user');
     	$terms = Term::get();
         if($request->isMethod('post')){
             $this->validate($request,$this->rules_create,$this->messages_create);
-            $media = new Media;
-            $media->user_id = $user->id;
-            $media->term_id = $request->input('term_id');
-            $media->media_name = $request->input('media_name');
-            $media->media_alias = str_slug($request->input('media_name'),'-');
-
-            $file = $request->file('media_file');
-            $extension = $file->extension();
-            $media_file = $media->media_alias.'-'.time().'.'.$extension;
-            $path = $file->move(public_path().'/img',$media_file);
-            $media->media_file = $media_file;
-
-            if($media->save()){
-                Session::flash('success','Upload ảnh thành công.');
-                return redirect('user/media/edit/'.$media->id);
-            }else{
-                Session::flash('error','Upload ảnh lỗi hỏi trường.');
-                return back();
+            $files = $request->file('media_file');
+            foreach ($files as $key => $file){
+                $media = new Media;
+                $media->user_id = $user->id;
+                $media->term_id = $request->input('term_id');
+                $media->media_name = $request->input('media_name');
+                $media->media_alias = str_slug($request->input('media_name'),'-');
+                
+                $media_file = $media->media_alias.'-'.time().'-'.$key.'.'.$file->extension();
+                $file->move(public_path().'/img',$media_file);
+                
+                $media->media_file = $media_file;
+                $media->save();
             }
+            Session::flash('success','Upload ảnh thành công.');
+            return redirect('user/media/index');
         }else{
             $data['user'] = $user;
             $data['terms'] = $terms;
@@ -62,11 +47,7 @@ class MediaController extends Controller{
         $terms = Term::get();
         $media = Media::find($media_id);
         if($request->isMethod('post')){
-            if (Gate::forUser($user)->denies('edit-media', $media)) {
-                Session::flash('error','Ảnh không phải của bạn.');
-                return back();
-            }
-            $this->validate($request,$this->rules_edit,$this->messages_edit);
+            $media->term_id = $request->input('term_id');
             $media->media_name = $request->input('media_name');
             $media->media_alias = str_slug($request->input('media_name'),'-');
             if($media->save()){
@@ -109,7 +90,6 @@ class MediaController extends Controller{
         $medias = $medias->paginate(24);
         $data['user'] = $user;
         $data['users'] = $users;
-        $data['request'] = $request;
         $data['medias'] = $medias;
         $data['terms'] = $terms;
         $data['menu'] = 'menu.menuUser'; 

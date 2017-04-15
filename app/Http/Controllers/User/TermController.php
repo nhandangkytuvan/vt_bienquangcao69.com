@@ -93,7 +93,7 @@ class TermController extends Controller{
             $terms = $terms->where('term_name','like','%'.$request->input('term_name').'%');
         }
         if($request->input('term_id')){
-            $terms = $terms->where('term_id',$request->input('term_id'));
+            $terms = $terms->where('id',$request->input('term_id'));
         }
         $terms = $terms->get();
         $data['user'] = $user;
