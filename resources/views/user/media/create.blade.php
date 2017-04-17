@@ -3,24 +3,24 @@
     @include('menu.menuUser')
 @endsection('menu')
 @section('content')
+<div class="alert alert-success">
+    <ul>
+        <li><i class="glyphicon glyphicon-check"></i> Hỗ trợ úp nhiều ảnh cùng lúc</li>
+    </ul>
+</div>
 <form method="post"  enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="panel panel-default">
         <div class="panel-heading text-center">Up ảnh lên</div>
         <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label class="control-label">Ảnh</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
-                            <input type="file" class="form-control" name="media_file[]" multiple>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6" id="image-holder">
+            <div class="form-group">
+                <label class="control-label">Ảnh</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                    <input type="file" class="form-control" name="media_file[]" multiple id="fileUpload">
                 </div>
             </div>
+            <div class="row" id="image-holder"></div>
             <div class="form-group">
                 <label class="control-label">Tên</label>
                 <input type="text" class="form-control" name="media_name" placeholder="Tiêu đề ảnh" value="{{ old('media_name') }}">
