@@ -52,9 +52,7 @@
 					@endforeach
 				</div>
 				<div class="flex1col3">
-					<video width="100%" height="275px" controls loop>
-					  	<source src="{{ $links[2]->link_url }}" type="video/mp4">
-					</video>
+					{!! $links[2]->link_url !!}
 				</div>
 			</div>
 		</div>
