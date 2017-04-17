@@ -77,9 +77,8 @@
 		<h3>Video nổi bật</h3>
 		<div class="video">
 			<div class="video-top">
-				<video width="100%" height="275px" controls loop>
-				  	<source src="<?php echo e($links[2]->link_url); ?>" type="video/mp4">
-				</video>
+				<?php echo $links[2]->link_url; ?>
+
 			</div>
 		</div>
 	</main>

@@ -3,7 +3,7 @@
 	<h3 class="arrow_box">Sản phẩm gần đây</h3>
 	@foreach($posts_sidebar as $post)
 	<div class="post">
-		<h3 class="text-center text-uppercase post-name">{{ $post->post_name }}</h3>
+		<h3 class="text-center text-uppercase post-name"><a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a></h3>
 		<h3 class="post-avatar">
 			<a href="{{ MyAPI::getUrlPostObj($post) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a>
 		</h3>
@@ -20,7 +20,7 @@
 		<h3 class="arrow_box">Sản phẩm liên quan</h3>
 		@foreach($posts_lienquan as $post)
 		<div class="post">
-			<h3 class="text-center text-uppercase post-name">{{ $post->post_name }}</h3>
+			<h3 class="text-center text-uppercase post-name"><a href="{{ MyAPI::getUrlPostObj($post) }}">{{ $post->post_name }}</a></h3>
 			<h3 class="post-avatar">
 				<a href="{{ MyAPI::getUrlPostObj($post) }}"><img src="{{ asset('public/img/'.$post->post_avatar) }}" class="center-block img-responsive"></a>
 			</h3>
