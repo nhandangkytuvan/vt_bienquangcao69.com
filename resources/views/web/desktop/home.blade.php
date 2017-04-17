@@ -53,7 +53,7 @@
 				</div>
 				<div class="flex1col3">
 					<video width="100%" height="275px" controls loop>
-					  	<source src="{{ asset('public/video/videoled.mp4') }}" type="video/mp4">
+					  	<source src="{{ $links[2]->link_url }}" type="video/mp4">
 					</video>
 				</div>
 			</div>

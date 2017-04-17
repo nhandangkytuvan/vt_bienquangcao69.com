@@ -58,7 +58,7 @@ class MediaController extends Controller{
         $terms = Term::get();
         $media = Media::find($media_id);
         if($request->isMethod('post')){
-            $this->validate($request,$this->rules_create,$this->messages_create);
+            $this->validate($request,$this->rules_edit,$this->messages_edit);
             $media->term_id = $request->input('term_id');
             $media->media_name = $request->input('media_name');
             $media->media_alias = str_slug($request->input('media_name'),'-');
