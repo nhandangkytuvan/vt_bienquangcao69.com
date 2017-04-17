@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label class="control-label">Thư mục</label>
                         <select name="term_id" class="form-control">
-                            <option value="0">Chọn thư mục</option>
+                            <option value="">Chọn thư mục</option>
                             <?php $__currentLoopData = $data['terms']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=> $term): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
                                 <?php if($term->term_id == 0): ?>
                                     <option value="<?php echo e($term->id); ?>"><?php echo e($term->term_name); ?></option>

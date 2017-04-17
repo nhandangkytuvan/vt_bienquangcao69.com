@@ -2,9 +2,7 @@
     <title><?php echo e($setting->web_name); ?></title>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('keyword'); ?>
-<meta property="og:image" content="<?php echo e(asset('public/img/'.$setting->web_logo)); ?>">
-<meta id="metaDescription" name="description" content="<?php echo e($setting->web_description); ?>">
-<meta id="metaKeywords" name="keywords" content="<?php echo e($setting->web_keyword); ?>">
+	<?php echo $__env->make('seo.seo_home', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('css'); ?>
     <link rel="stylesheet" href="<?php echo e(asset('public/css/mobile/mobile-home.css')); ?>">
@@ -74,6 +72,14 @@
 					</li>
 					<?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
 				</ul>
+			</div>
+		</div>
+		<h3>Video nổi bật</h3>
+		<div class="video">
+			<div class="post-top">
+				<video width="100%" height="275px" controls loop>
+				  	<source src="<?php echo e($links[2]->link_url); ?>" type="video/mp4">
+				</video>
 			</div>
 		</div>
 	</main>
