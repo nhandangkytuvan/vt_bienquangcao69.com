@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="language" content="vi" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="classification" content="DOANH NGHIỆP" />
+	<meta name="distribution" content="Quảng cáo" />
+	<meta name="rating" content="General" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="30 days" />
+	<meta name="creator" content="DOANH NGHIỆP TRUYỀN THÔNG VÀ ĐẦU TƯ QUẢNG CÁO 69" />
+	<meta name="publisher" content="DOANH NGHIỆP TRUYỀN THÔNG VÀ ĐẦU TƯ QUẢNG CÁO 69" />
+    <meta name="author" content="{{ $setting->web_name }}">
+    <!-- csrf -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    @yield('title')
-    <meta name="author" content="bienquangcao69.com">
-    <meta property="og:site_name" content="bienquangcao69.com">
-    <meta property="og:type" content="website">
-    @yield('keyword')
+    <!-- facebook -->
+    <meta property="og:site_name" content="DOANH NGHIỆP TRUYỀN THÔNG VÀ ĐẦU TƯ QUẢNG CÁO 69" />
+	<meta property="og:type" content="DOANH NGHIỆP" />
+    <meta property="og:locale " content="vi_VN">
+    <!-- link rss,sitemap -->
+    <link rel="canonical" href="{{ url('sitemap.xml') }}" />
+    <!-- link icon -->
     <link rel="shortcut icon" href="{{ asset('public/img/'.$setting->web_icon) }}" type="image/x-icon">
+    @yield('title')
+    @yield('keyword')
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/font-awesome/css/font-awesome.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/slick/slick.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/slick/slick-theme.css') }}">

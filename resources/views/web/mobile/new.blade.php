@@ -3,9 +3,7 @@
     <title>Tìm kiếm - {{ $setting->web_name }}</title>
 @endsection('title')
 @section('keyword')
-<meta property="og:image" content="{{ $setting->web_logo }}">
-<meta id="metaDescription" name="description" content="">
-<meta id="metaKeywords" name="keywords" content="">
+	@include('seo.seo_term',['data'=>$data])
 @endsection('keyword')
 @section('css')
     <link rel="stylesheet" href="{{ asset('public/css/mobile/mobile-pagination.css') }}">

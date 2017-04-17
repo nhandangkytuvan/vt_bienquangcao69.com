@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Setting;
 use App\Post;
 use App\Term;
 use View;
@@ -17,20 +16,6 @@ class HomeController extends Controller{
 			return view('web.desktop.home',['data'=>$data]);
 		}else{
 			return view('web.mobile.home',['data'=>$data]);
-		}
-	}
-	public function about(Request $request){
-		if(BrowserDetect::isDesktop()){
-			return view('web.desktop.about');
-		}else{
-			return view('web.mobile.about');
-		}
-	}
-	public function address(Request $request){
-		if(BrowserDetect::isDesktop()){
-			return view('web.desktop.address');
-		}else{
-			return view('web.mobile.address');
 		}
 	}
 	public function search(Request $request){

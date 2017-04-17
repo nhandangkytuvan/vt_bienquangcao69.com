@@ -24,46 +24,12 @@ class TermController extends Controller{
             }else{
                 return view('web.desktop.new',['data'=>$data]); 
             }
-            // switch ($term_id) {
-            //     case 12:
-            //         return view('web.desktop.new',['data'=>$data]); 
-            //         break;
-            //     case 13:
-            //         return view('web.desktop.new',['data'=>$data]); 
-            //         break;
-            //     case 14:
-            //         return view('web.desktop.new',['data'=>$data]); 
-            //         break;
-            //     case 15:
-            //         return view('web.desktop.new',['data'=>$data]); 
-            //         break;
-            //     default:
-            //         return view('web.desktop.product',['data'=>$data]); 
-            //         break;
-            // }
         }else{
             if(in_array($term_id, $sanpham_ids)){
                 return view('web.mobile.product',['data'=>$data]); 
             }else{
                 return view('web.mobile.new',['data'=>$data]); 
             }
-            // switch ($term_id) {
-            //     case 12:
-            //         return view('web.mobile.new',['data'=>$data]);
-            //         break;
-            //     case 13:
-            //         return view('web.mobile.new',['data'=>$data]);
-            //         break;
-            //     case 14:
-            //         return view('web.mobile.new',['data'=>$data]); 
-            //         break;
-            //     case 15:
-            //         return view('web.mobile.new',['data'=>$data]); 
-            //         break;
-            //     default:
-            //         return view('web.mobile.product',['data'=>$data]);  
-            //         break;
-            // }
         }
     }
 }
