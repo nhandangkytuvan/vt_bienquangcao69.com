@@ -83,10 +83,6 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-9">
-                    <div class="alert alert-success">
-                        <span class="glyphicon glyphicon-check"></span> 
-                        Đã sửa và bổ sung . Click <a href="{{ url('user/user/update') }}"> vào đây</a> để xem...
-                    </div>
                     @if(Session::has('success'))
                         <div class="alert alert-success">
                             <span class="glyphicon glyphicon-check"></span> 

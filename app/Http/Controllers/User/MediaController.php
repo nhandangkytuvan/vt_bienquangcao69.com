@@ -10,10 +10,22 @@ use Gate;
 use Session;
 class MediaController extends Controller{
     protected $rules_create = [
+        'media_name' => 'required',
         'media_file' => 'required',
+        'term_id' => 'required',
     ];
     protected $messages_create = [
+        'media_name.required' => 'Bạn chưa nhập tên ảnh.',
         'media_file.required' => 'Bạn chưa chọn ảnh úp lên.',
+        'term_id.required' => 'Bạn chưa chọn thư mục lưu.',
+    ];
+    protected $rules_edit = [
+        'media_name' => 'required',
+        'term_id' => 'required',
+    ];
+    protected $messages_edit = [
+        'media_name.required' => 'Bạn chưa nhập tên ảnh.',
+        'term_id.required' => 'Bạn chưa chọn thư mục lưu.',
     ];
     public function create(Request $request){
         $user = Session::get('user');
@@ -46,6 +58,7 @@ class MediaController extends Controller{
         $terms = Term::get();
         $media = Media::find($media_id);
         if($request->isMethod('post')){
+            $this->validate($request,$this->rules_create,$this->messages_create);
             $media->term_id = $request->input('term_id');
             $media->media_name = $request->input('media_name');
             $media->media_alias = str_slug($request->input('media_name'),'-');
