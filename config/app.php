@@ -179,6 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
         'hisorange\BrowserDetect\Provider\BrowserDetectService',
+        Petehouston\Tinymce\TinymceServiceProvider::class,
     ],
 
     /*

@@ -112,7 +112,11 @@
                             content_css: [
                                 '{{ asset("public/font/codepen.min.css") }}'
                             ],
-                            imagetools_cors_hosts: ['//http://localhost/cty_phongkhamnamkhang.net'],
+                            relative_urls: false,
+                            file_browser_callback: function(field_name, url, type, win) {
+                                // trigger file upload form
+                                if (type == 'image') $('#formUpload input').click();
+                            }
                         });
                     });
                 </script>
@@ -128,4 +132,5 @@
         </div>
     </div>
 </form>
+@include('mceImageUpload::upload_form')
 @endsection('content')
