@@ -3,8 +3,30 @@
     @include('menu.menuUser')
 @endsection('menu')
 @section('content')
-<div class="alert alert-danger">
-    <span class="label label-success">Quản trị thay đổi giao diện cập nhật thêm, sửa đổi</span> tạm thời đã hoàn tất. <br>Dự án sẽ dừng lại vào ngày mai, bàn giao hoàn tất dữ liệu - code
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        Hướng dẫn sử dụng
+    </div>
+    <table class="table table-bordered">
+        <tr class="active">
+            <td>STT</td>
+            <td>Ảnh chụp</td>
+            <td>Nội dung</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <a href="{{ asset('public/images/huongdan/upanh.png') }}">
+                    <img src="{{ asset('public/images/huongdan/upanh.png') }}" class="img-responsive">
+                </a>
+            </td>
+            <td>
+                Úp ảnh trong khi soạn thảo
+            </td>
+            <td></td>
+        </tr>
+    </table>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading text-center">
@@ -88,30 +110,18 @@
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td>1</td>
+            <td>15.4</td>
+            <td>
+                <ul class="list-group">
+                    <li class="list-group-item bg-info">Fix lỗi ảnh ko hiển thj trong soạn thảo</li>
+                    <li class="list-group-item bg-success">Thêm sản phẩm liên quan bên trái khi xem bài viết</li>
+                    <li class="list-group-item bg-info">Upload nhiều ảnh</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
     </table>
 </div>
-<style>
-    .table.table-bordered tr td:nth-child(3){
-        padding-left: 0;
-    }
-    .table.table-bordered ul.list-group{
-        border-radius: 0;
-    }
-    .table.table-bordered ul.list-group li.list-group-item{
-        border-left: none;
-        border-right: none;
-    }
-    .table.table-bordered ul.list-group li.list-group-item:first-child{
-        border-top: none;
-    }
-    .table.table-bordered ul.list-group li.list-group-item:last-child{
-        border-bottom: none;
-    }
-    .table.table-bordered ul.list-group li.list-group-item.bg-success{
-        background-color: #5cb85c;color: #fff;
-    }
-    .table.table-bordered ul.list-group li.list-group-item.bg-info{
-        background-color: #ddd;
-    }
-</style>
 @endsection('content')
