@@ -20,9 +20,34 @@
                 <a href="{{ asset('public/images/huongdan/upanh.png') }}">
                     <img src="{{ asset('public/images/huongdan/upanh.png') }}" class="img-responsive">
                 </a>
+                <a href="{{ asset('public/images/huongdan/upanh1.png') }}">
+                    <img src="{{ asset('public/images/huongdan/upanh1.png') }}" class="img-responsive">
+                </a>
             </td>
             <td>
-                Úp ảnh trong khi soạn thảo
+                Úp ảnh trong khi soạn thảo, có 2 cách
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <a href="{{ asset('public/images/huongdan/upanh.png') }}">
+                    <img src="{{ asset('public/images/huongdan/linkanh1.png') }}" class="img-responsive">
+                </a>
+                <a href="{{ asset('public/images/huongdan/desktop.png') }}">
+                    <img src="{{ asset('public/images/huongdan/desktop.png') }}" class="img-responsive">
+                </a>
+                <a href="{{ asset('public/images/huongdan/mobile.png') }}">
+                    <img src="{{ asset('public/images/huongdan/mobile.png') }}" class="img-responsive">
+                </a>
+                <a href="{{ asset('public/images/huongdan/youtube.png') }}">
+                    <img src="{{ asset('public/images/huongdan/youtube.png') }}" class="img-responsive">
+                </a>
+            </td>
+            <td>
+                <p>Khu vực này để thay đổi ảnh trên cùng mobile, desktop, và thay link youtube trang chủ</p>
+                <p>Chỉ cần úp ảnh vào copy link ảnh rồi lưu lại</p>
             </td>
             <td></td>
         </tr>

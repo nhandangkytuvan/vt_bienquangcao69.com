@@ -14,7 +14,7 @@
 	@if(isset($data['post']))
 		@php  
 			$term = $data['post']->term;
-			$posts_lienquan = $term->post()->where('id','<>',$data['post']->id)->limit(4)->get();
+			$posts_lienquan = $term->post()->whereNotIn('term_id',[14,15,13])->where('id','<>',$data['post']->id)->limit(4)->get();
 		@endphp
 		@if(count($posts_lienquan))
 		<h3 class="arrow_box">Sản phẩm liên quan</h3>
